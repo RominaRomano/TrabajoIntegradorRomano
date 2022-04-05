@@ -1,0 +1,17 @@
+<!-- EXPERIENCIA-->
+
+<section class="pd-section alterna-color mb-5">
+    <h1 class="mb-5 titulo">EXPERIENCIA</h1>
+    <div class="d-flex mb-5" *ngFor="let experiencia of experiencialist"> 
+        <div class="flex-grow-1">
+            <h3 class="subtitulo mb-0">{{experiencia.puesto}}</h3>
+            <p class="minisubtitulo mb-3">{{experiencia.empresa}}</p>
+            <p>{{experiencia.tarea}}</p>
+            <p *ngIf="experiencia.contacto !==''">Contacto: {{experiencia.contacto}}</p>
+        </div>
+        <div class="flex-shrink-0">
+            <button class="botoncito-verde botoncito-flex"><i class="fas fa-edit"></i></button>
+            <button class="botoncito-verde botoncito-flex"><i class="fas fa-trash-alt"></i></button>
+            <span class="texto-color">{{experiencia.fechini}} - {{experiencia.fechfin}}</span></div>
+    </div>
+</section>

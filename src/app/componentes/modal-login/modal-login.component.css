@@ -1,0 +1,90 @@
+.modal {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #111111bd;
+display: flex;
+z-index: 2;
+}
+
+.ventana-modal {
+  width: 90%;
+  max-width: 60rem;
+  max-height: 90%;
+  padding: 8% 0 0;
+  margin: auto;
+}
+
+.cerrar {
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: var(--color-boton-apagado);
+  color: var(--color-int-apagado);
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.cerrar:hover {
+  background:var(--color-boton-encendido);
+  color:var(--color-int-encendido);
+}
+
+.formulario {
+  position: relative;
+  z-index: 1;
+  background:var(--seccion-clara);
+  border-radius: 1.5rem;
+  max-width: 36rem;
+  margin: 0 auto 10rem;
+  padding: 4.5rem;
+  text-align: center;
+}
+
+.formulario input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background:var(--seccion-oscura);
+  width: 100%;
+  border: 0;
+  margin: 0 0 1.5rem;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  font-size: 1.4rem;
+}
+.boton-confirma {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background:var(--color-boton-apagado);
+  width: 100%;
+  border: 0;
+  padding: 1.5rem;
+  color:var(--color-int-apagado);
+  font-size: 1.4rem;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  margin-top: 2rem;
+  border-radius: 1rem;
+}
+.boton-confirma:hover,.boton-confirma:active,.boton-confirma:focus {
+  background:var(--color-boton-encendido);
+  color: var(--color-int-encendido);
+}
+.formulario .mensaje {
+  margin: 1.5rem 0 0;
+  color: #161515b9;
+  font-size: 1.2rem;
+}
+.formulario .mensaje a {
+  color: var(--color-boton-encendido);
+  text-decoration: none;
+}

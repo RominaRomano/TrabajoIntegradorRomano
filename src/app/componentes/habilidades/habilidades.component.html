@@ -1,0 +1,16 @@
+<!--DOMINIO DE HABILIDADES DURAS Y BLANDAS - IDIOMAS-->
+
+<section class="pd-section alterna-color mb-5">
+    <h1 class="titulo mb-2">Habilidades</h1>
+    <h3 class="subtitulo mb-5">de las Duras y de las Blandas</h3>
+    <div class="container_grafico">
+        <div class="grafico" *ngFor="let habilidad of habilidadlist" [ngStyle]="{'background-image':colorConic(habilidad.colorFuerte, habilidad.colorDebil, habilidad.porcentaje)}"> 
+            <p class="textgraf"><i class={{habilidad.icono}}></i></p>
+            <p class="porcgraf">{{habilidad.porcentaje}}</p>
+            <div class="botoncito-skill">
+                <button class="botoncito-verde"><i class="fas fa-edit"></i></button>    
+                <button class="botoncito-verde"><i class="fas fa-trash-alt"></i></button>
+            </div>
+        </div>    
+    </div>
+</section>

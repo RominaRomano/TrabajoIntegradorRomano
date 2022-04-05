@@ -1,0 +1,242 @@
+{
+"dirLogoArgProg":"./assets/img/LogoArgProgNeg.png",
+"altLogoArgProg":"Logo Argentina Programa",
+"dirBanner":"./assets/img/BannerRomi.jpg",
+"altBanner":"Baner del Protfolio",
+"dirPerfil":"./assets/img/FotoPerfil.jpg",
+"altPerfil":"Foto de Perfil",
+"nombre":"ROMINA D.",
+"apellido":" ROMANO",
+"direccion":"Pueyrredón 1440 - Capilla del Monte - Córdoba - C.P. 5184 - ",
+"email":"roderomano@gmail.com",
+"acercade":"Tengo experiencia en el manejo y administración de Bases de Datos, procesamiento de la información y vistas diseñadas para una presentación agradable y significativa al usuario. Estoy siempre dispuesta a aprender y compartir mis conocimientos, tanto en relación a las nuevas tecnologías, como al intercambio entre colegas.",
+"experiencia":[
+    {
+    "puesto":"Profesora de Matemática y Preceptora",
+    "empresa":"C.E.N.M.A.     La Falda anexo Capilla del Monte",
+    "tarea":"En mi rol de Preceptora en esta escuela de nivel medio para adultos, no sólo atiendo aquellas cuestiones relacionadas al correcto desenvolvimiento pedagógico de los estudiantes, sino también aquellas tareas administrativas inherentes a la secretaría escolar: información de legajos, organización de tiempos y espacios, procesamientos y presentaciones requeridas por el Ministerio de Educación. Como Profesora de Matemática trabajo desde abril-2019 en el curso de 1° año (CBU).",
+    "contacto":"",
+    "fechini":"Mayo 2015",
+    "fechfin":"Actualidad"
+    },
+    {
+    "puesto":"Administrativa Encargada",
+    "empresa":"Hostería 'La Esperanza'",
+    "tarea":"Administración de Recursos Humanos y Materiales. Organización de momentos y servicios brindados. Registro de reservas y recepción de visitantes.",
+    "contacto":"",
+    "fechini":"Enero 2005",
+    "fechfin":"Marzo 2015"
+    },
+    {
+    "puesto":"Recepcionista",
+    "empresa":"Hotel 'Los Pinos'",
+    "tarea":"Registro de reservas y recepción de visitantes.",
+    "contacto":"Mario Tizón TE: 3548-404074",
+    "fechini":"Agosto 2002",
+    "fechfin":"Noviembre 2004"
+    },
+    {
+    "puesto":"Secretaria",
+    "empresa":"Inmobiliaria 'De Emilio Propiedades'",
+    "tarea":"Recepción, atención telefónica y trámites bancarios.",
+    "contacto":"Daniel De Emilio TE: (011) 42043095",
+    "fechini":"Enero 2002",
+    "fechfin":"Junio 2002"
+    },
+    {
+    "puesto":"Programadora",
+    "empresa":"A.S.D. 'Argentina Software Design'",
+    "tarea":"En principio trabajé transformando código existente en Clipper al lenguaje de CA-Visual Object; luego se continuó con las mejoras del sistema denominado 'Tesauro', actualmente vigente en nueva empresa CEO SOFIHA.",
+    "contacto":"Nestor Mazza por LinkedIn",
+    "fechini":"Diciembre 1999",
+    "fechfin":"Noviembre 2001"
+    },
+    {
+    "puesto":"Programadora",
+    "empresa":"Meils Argentina S.A.",
+    "tarea":"Trabajé con Clipper en esta empresa organizadora de Eventos y Exposiciones. La tarea constaba de codoficar tanto para captura de la información de Expositores, Productos y Visitantes (mediante lectores de código de barras), así como también, a posterior de cada evento, el filtro de limpieza de dichas lecturas, traspaso a base de datos, procesamiento de datos, elaboración y presentación de informes para el/los organizadores.",
+    "contacto":"Ariel Guerrero (era quien estaba como encargado en aquel momento) TE: (011) 4315-2512",
+    "fechini":"Mayo 1999",
+    "fechfin":"Septiembre 1999"
+    },
+    {
+    "puesto":"Programadora",
+    "empresa":"Independiente",
+    "tarea":"Desarrollo de Software en Clipper para comercios varios de la localidad Wilde, localidad en que residía en esa época.",
+    "contacto":"",
+    "fechini":"Junio 1996",
+    "fechfin":"Febrero 1999"
+    }
+    ],
+"educacion":[
+    {
+    "logo":"./assets/img/LogoIES.png",
+    "altlogo":"Logo IES 'Arturo Capdevila'",
+    "nombre":"I.E.S. 'Arturo Capdevila'",
+    "titulo":"Profesora de Matemática",
+    "descripcion":"Recibida Mejor Promedio: 9.41",        
+    "fechini":"Marzo 2004",
+    "fechfin":"Diciembre 2007"
+    },    
+    {
+    "logo":"./assets/img/LogoUTN.png",
+    "altlogo":"Logo UTN",
+    "nombre":"U.T.N. (F.R.A.)",
+    "titulo":"Analista de Sistemas",
+    "descripcion":"Todas las asignaturas aprobadas - Tesis sin finalizar",        
+    "fechini":"Marzo 1996",
+    "fechfin":"Diciembre 1996"
+    },  
+    {
+    "logo":"./assets/img/LogoUTN.png",
+    "altlogo":"Logo UTN",
+    "nombre":"U.T.N. (F.R.A.)",
+    "titulo":"Programadora",
+    "descripcion":"Lenguajes de Programación: Pascal, Clipper, Cobol, C++",        
+    "fechini":"Marzo 1994",
+    "fechfin":"Diciembre 1995"
+    },
+    {
+    "logo":"./assets/img/LogoEES9.jpg",
+    "altlogo":"Logo E.E.S. N° 9",
+    "nombre":"E.E.M. N° 9 - Villa Domínico",
+    "titulo":"Bachiller Contable",
+    "descripcion":"",        
+    "fechini":"Marzo 1989",
+    "fechfin":"Diciembre 1993"
+    }    
+    ],
+"habilidad":[
+    {
+    "icono":"fab fa-html5",
+    "colorFuerte":"#e47711",
+    "colorDebil":"#f7bc7a",
+    "porcentaje":"50%"
+    },    
+    {
+    "icono":"fab fa-css3-alt",
+    "colorFuerte":"#e47711",
+    "colorDebil":"#f7bc7a",
+    "porcentaje":"35%"
+    },    
+    {
+    "icono":"fab fa-angular",
+    "colorFuerte":"#e47711",
+    "colorDebil":"#f7bc7a",
+    "porcentaje":"30%"
+    },    
+    {
+    "icono":"fab fa-node-js",
+    "colorFuerte":"#e47711",
+    "colorDebil":"#f7bc7a",
+    "porcentaje":"5%"
+    },
+    {
+    "icono":"fab fa-bootstrap",
+    "colorFuerte":"#e47711",
+    "colorDebil":"#f7bc7a",
+    "porcentaje":"20%"
+    },
+    {
+    "icono":"fas fa-database",
+    "colorFuerte":"#e47711",
+    "colorDebil":"#f7bc7a",
+    "porcentaje":"30%"
+    },
+    {
+    "icono":"fab fa-github",
+    "colorFuerte":"#e47711",
+    "colorDebil":"#f7bc7a",
+    "porcentaje":"40%"
+    },
+    {
+    "icono":"fab fa-java",
+    "colorFuerte":"#e47711",
+    "colorDebil":"#f7bc7a",
+    "porcentaje":"50%"
+    },
+    {
+    "icono":"fab fa-js-square",
+    "colorFuerte":"#e47711",
+    "colorDebil":"#f7bc7a",
+    "porcentaje":"40%"
+    },                                        
+    {
+    "icono":"fab fa-php",
+    "colorFuerte":"#e47711",
+    "colorDebil":"#f7bc7a",
+    "porcentaje":"30%"
+    },
+    {
+    "icono":"fas fa-book-reader",
+    "colorFuerte":"#e47711",
+    "colorDebil":"#f7bc7a",
+    "porcentaje":"80%"
+    },
+    {
+    "icono":"fas fa-grin-alt",
+    "colorFuerte":"#e47711",
+    "colorDebil":"#f7bc7a",
+    "porcentaje":"75%"
+    },
+    {
+    "icono":"fas fa-people-carry",
+    "colorFuerte":"#e47711",
+    "colorDebil":"#f7bc7a",
+    "porcentaje":"65%"
+    },
+    {
+    "icono":"fas fa-lightbulb",
+    "colorFuerte":"#e47711",
+    "colorDebil":"#f7bc7a",
+    "porcentaje":"75%"
+    },
+    {
+    "icono":"fas fa-hand-holding-heart",
+    "colorFuerte":"#e47711",
+    "colorDebil":"#f7bc7a",
+    "porcentaje":"80%"
+    },
+    {
+    "icono":"fas fa-hourglass-half",
+    "colorFuerte":"#e47711",
+    "colorDebil":"#f7bc7a",
+    "porcentaje":"75%"
+    },
+    {
+    "icono":"fas fa-users",
+    "colorFuerte":"#e47711",
+    "colorDebil":"#f7bc7a",
+    "porcentaje":"65%"
+    }
+],
+"proyecto":[
+    {
+    "imagen":"./assets/img/imagenproyecto.jpeg",
+    "altimagen":"Imagen del Proyecto 1",
+    "nombre":"Primer Proyecto: Este Portfolio",
+    "descripcion":"Este portfolio es mi regreso como programadora luego de 21 años de deuda pendiente para conmigo. Espero que les guste mi trabajo y que sea el primero de muchos más.",
+    "refboton":"'#!'",
+    "fechini":"Octubre 2021",
+    "fechfin":"Junio 2022"
+    },    
+    {
+    "imagen":"",
+    "altimagen":"Imagen del Proyecto 2",
+    "nombre":"Segundo Proyecto",
+    "descripcion":"A futuro no tan lejano.",
+    "refboton":"'#!'",
+    "fechini":"Muy pronto",
+    "fechfin":"Pronto"
+    },
+    {
+    "imagen":"",
+    "altimagen":"Imagen del Proyecto 3",
+    "nombre":"Tercer Proyecto",
+    "descripcion":"A futuro y ya con más entrenamiento.",
+    "refboton":"'#!'",
+    "fechini":"Pronto",
+    "fechfin":"A su Tiempo"
+    }
+    ]    
+}

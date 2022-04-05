@@ -1,0 +1,22 @@
+<!--Proyectos...
+En esta sección deberá encontrarse la información sobre los proyectos que desarrollaste o en que te involucraste, incluyendo este
+portfolio web. Cada proyecto deberá contener el nombre, fecha de realización, descripción y el link a su evidencia. Además, podés ilustrar
+esta sección con imágenes de los proyectos.-->
+
+<!--MIS PROYECTOS-->
+            
+<section class="pd-section mb-5">
+    <h1 class="titulo mb-5">Mis Proyectos</h1>
+    <div class="d-flex mb-5" *ngFor="let proyecto of proyectolist">
+        <img [src]="proyecto.imagen" alt={{proyecto.altimagen}} class="LogoCuad">
+        <div class="flex-grow-1">
+            <h3 class="subtitulo mb-3">{{proyecto.nombre}}</h3>
+            <p class="mb-3">{{proyecto.descripcion}}</p>
+            <button class="boton-verde" onclick="location.href='#!'">Ir al Proyecto</button>    
+        </div>
+        <div class="flex-shrink-0">
+            <button class="botoncito-verde botoncito-flex"><i class="fas fa-edit"></i></button>
+            <button class="botoncito-verde botoncito-flex"><i class="fas fa-trash-alt"></i></button>
+            <span class="texto-color">{{proyecto.fechini}} - {{proyecto.fechfin}}</span></div>
+    </div>
+</section>

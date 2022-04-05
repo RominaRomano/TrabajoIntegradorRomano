@@ -1,0 +1,18 @@
+<header class= "banner mb-2">
+    <img [src]="miPortfolio.dirLogoArgProg" [alt]="miPortfolio.altLogoArgProg" class="LogoRect">
+    <button (click)="abreModal()" class="boton-verde flota-derecha"  >LOGIN</button>
+    <div class="iconos-red-soc">
+        <a class="icono-red-soc" href="#!"><i class="fab fa-linkedin-in"></i></a>
+        <a class="icono-red-soc" href="#!"><i class="fab fa-github"></i></a>
+        <a class="icono-red-soc" href="#!"><i class="fab fa-facebook-f"></i></a>
+    </div>
+    <img class="img-banner" [src]="miPortfolio.dirBanner" alt={{miPortfolio.altBanner}}>
+    <button class="botoncito-verde botoncito-banner"><i class="fas fa-edit"></i></button>
+    <div class="perfil">
+        <img class="img-perfil redondear mb-2" [src]="miPortfolio.dirPerfil" alt={{miPortfolio.altPerfil}}>
+        <button class="botoncito-verde botoncito-perfil"><i class="fas fa-edit"></i></button>
+    </div>
+</header>
+<div *ngIf="modalSwitch==true">
+    <app-modal-login></app-modal-login>
+</div>

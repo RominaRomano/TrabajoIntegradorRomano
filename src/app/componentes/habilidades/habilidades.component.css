@@ -1,0 +1,49 @@
+
+.container_grafico{
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+.grafico{
+  position: relative;
+  margin-left: 3rem;
+  margin-bottom: 6rem;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  /*background-image: conic-gradient(color %, color %) lo resolví usando una función en el js que devolviera
+  el string que iba en el ngStyle usado para cada ngFor ya que cada gráfico tiene un porcentaje traído desde json*/
+}
+.botoncito-skill{
+    left: 1rem;
+    top: -4rem;
+    display:flex;
+    position: absolute;
+}
+.textgraf{
+  font-size: 4rem;
+  font-weight: bold;
+  color:var(--color-icono-encendido);
+  text-align:center;
+  justify-items: center;
+  line-height: 6rem;
+  width: 8rem;
+  height: 8rem;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: var(--seccion-oscura) content-box;
+  border-radius: 50%;
+}
+.porcgraf{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color:var(--color-icono-encendido);
+  text-align:center;
+  line-height: 1rem;
+  width: 8rem;
+  height: 8rem;
+  position: absolute;
+  top:7rem;
+  left: 1.2rem;
+}
