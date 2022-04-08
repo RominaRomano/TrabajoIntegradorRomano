@@ -1,12 +1,7 @@
 {
-"dirLogoArgProg":"./assets/img/LogoArgProgNeg.png",
-"altLogoArgProg":"Logo Argentina Programa",
 "dirBanner":"./assets/img/BannerRomi.jpg",
-"altBanner":"Baner del Protfolio",
 "dirPerfil":"./assets/img/FotoPerfil.jpg",
-"altPerfil":"Foto de Perfil",
-"nombre":"ROMINA D.",
-"apellido":" ROMANO",
+"nombape":"ROMINA D. ROMANO",
 "direccion":"Pueyrredón 1440 - Capilla del Monte - Córdoba - C.P. 5184 - ",
 "email":"roderomano@gmail.com",
 "acercade":"Tengo experiencia en el manejo y administración de Bases de Datos, procesamiento de la información y vistas diseñadas para una presentación agradable y significativa al usuario. Estoy siempre dispuesta a aprender y compartir mis conocimientos, tanto en relación a las nuevas tecnologías, como al intercambio entre colegas.",
@@ -71,7 +66,6 @@
 "educacion":[
     {
     "logo":"./assets/img/LogoIES.png",
-    "altlogo":"Logo IES 'Arturo Capdevila'",
     "nombre":"I.E.S. 'Arturo Capdevila'",
     "titulo":"Profesora de Matemática",
     "descripcion":"Recibida Mejor Promedio: 9.41",        
@@ -80,7 +74,6 @@
     },    
     {
     "logo":"./assets/img/LogoUTN.png",
-    "altlogo":"Logo UTN",
     "nombre":"U.T.N. (F.R.A.)",
     "titulo":"Analista de Sistemas",
     "descripcion":"Todas las asignaturas aprobadas - Tesis sin finalizar",        
@@ -89,7 +82,6 @@
     },  
     {
     "logo":"./assets/img/LogoUTN.png",
-    "altlogo":"Logo UTN",
     "nombre":"U.T.N. (F.R.A.)",
     "titulo":"Programadora",
     "descripcion":"Lenguajes de Programación: Pascal, Clipper, Cobol, C++",        
@@ -98,7 +90,6 @@
     },
     {
     "logo":"./assets/img/LogoEES9.jpg",
-    "altlogo":"Logo E.E.S. N° 9",
     "nombre":"E.E.M. N° 9 - Villa Domínico",
     "titulo":"Bachiller Contable",
     "descripcion":"",        
@@ -109,111 +100,76 @@
 "habilidad":[
     {
     "icono":"fab fa-html5",
-    "colorFuerte":"#e47711",
-    "colorDebil":"#f7bc7a",
     "porcentaje":"50%"
     },    
     {
     "icono":"fab fa-css3-alt",
-    "colorFuerte":"#e47711",
-    "colorDebil":"#f7bc7a",
     "porcentaje":"35%"
     },    
     {
     "icono":"fab fa-angular",
-    "colorFuerte":"#e47711",
-    "colorDebil":"#f7bc7a",
     "porcentaje":"30%"
     },    
     {
     "icono":"fab fa-node-js",
-    "colorFuerte":"#e47711",
-    "colorDebil":"#f7bc7a",
     "porcentaje":"5%"
     },
     {
     "icono":"fab fa-bootstrap",
-    "colorFuerte":"#e47711",
-    "colorDebil":"#f7bc7a",
     "porcentaje":"20%"
     },
     {
     "icono":"fas fa-database",
-    "colorFuerte":"#e47711",
-    "colorDebil":"#f7bc7a",
     "porcentaje":"30%"
     },
     {
     "icono":"fab fa-github",
-    "colorFuerte":"#e47711",
-    "colorDebil":"#f7bc7a",
     "porcentaje":"40%"
     },
     {
     "icono":"fab fa-java",
-    "colorFuerte":"#e47711",
-    "colorDebil":"#f7bc7a",
     "porcentaje":"50%"
     },
     {
     "icono":"fab fa-js-square",
-    "colorFuerte":"#e47711",
-    "colorDebil":"#f7bc7a",
     "porcentaje":"40%"
     },                                        
     {
     "icono":"fab fa-php",
-    "colorFuerte":"#e47711",
-    "colorDebil":"#f7bc7a",
     "porcentaje":"30%"
     },
     {
     "icono":"fas fa-book-reader",
-    "colorFuerte":"#e47711",
-    "colorDebil":"#f7bc7a",
     "porcentaje":"80%"
     },
     {
     "icono":"fas fa-grin-alt",
-    "colorFuerte":"#e47711",
-    "colorDebil":"#f7bc7a",
     "porcentaje":"75%"
     },
     {
     "icono":"fas fa-people-carry",
-    "colorFuerte":"#e47711",
-    "colorDebil":"#f7bc7a",
     "porcentaje":"65%"
     },
     {
     "icono":"fas fa-lightbulb",
-    "colorFuerte":"#e47711",
-    "colorDebil":"#f7bc7a",
     "porcentaje":"75%"
     },
     {
     "icono":"fas fa-hand-holding-heart",
-    "colorFuerte":"#e47711",
-    "colorDebil":"#f7bc7a",
     "porcentaje":"80%"
     },
     {
     "icono":"fas fa-hourglass-half",
-    "colorFuerte":"#e47711",
-    "colorDebil":"#f7bc7a",
     "porcentaje":"75%"
     },
     {
     "icono":"fas fa-users",
-    "colorFuerte":"#e47711",
-    "colorDebil":"#f7bc7a",
     "porcentaje":"65%"
     }
 ],
 "proyecto":[
     {
     "imagen":"./assets/img/imagenproyecto.jpeg",
-    "altimagen":"Imagen del Proyecto 1",
     "nombre":"Primer Proyecto: Este Portfolio",
     "descripcion":"Este portfolio es mi regreso como programadora luego de 21 años de deuda pendiente para conmigo. Espero que les guste mi trabajo y que sea el primero de muchos más.",
     "refboton":"'#!'",
@@ -222,7 +178,6 @@
     },    
     {
     "imagen":"",
-    "altimagen":"Imagen del Proyecto 2",
     "nombre":"Segundo Proyecto",
     "descripcion":"A futuro no tan lejano.",
     "refboton":"'#!'",
@@ -231,7 +186,6 @@
     },
     {
     "imagen":"",
-    "altimagen":"Imagen del Proyecto 3",
     "nombre":"Tercer Proyecto",
     "descripcion":"A futuro y ya con más entrenamiento.",
     "refboton":"'#!'",

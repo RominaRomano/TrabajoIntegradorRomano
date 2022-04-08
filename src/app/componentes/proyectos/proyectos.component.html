@@ -8,7 +8,7 @@ esta sección con imágenes de los proyectos.-->
 <section class="pd-section mb-5">
     <h1 class="titulo mb-5">Mis Proyectos</h1>
     <div class="d-flex mb-5" *ngFor="let proyecto of proyectolist">
-        <img [src]="proyecto.imagen" alt={{proyecto.altimagen}} class="LogoCuad">
+        <img [src]="proyecto.imagen" alt="Imagen del Proyecto" class="LogoCuad">
         <div class="flex-grow-1">
             <h3 class="subtitulo mb-3">{{proyecto.nombre}}</h3>
             <p class="mb-3">{{proyecto.descripcion}}</p>

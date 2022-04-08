@@ -9,7 +9,7 @@ import { SwitchService } from 'src/app/servicios/switch.service';
 })
 export class EncabezadoComponent implements OnInit {
   
-  modalSwitch:any;
+  modalSwitch:boolean=false;
   miPortfolio:any;
   
   constructor(private datosPortfolio:PortfolioService, private modalSS:SwitchService) { }

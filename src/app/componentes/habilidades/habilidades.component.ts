@@ -15,7 +15,7 @@ export class HabilidadesComponent implements OnInit {
       this.habilidadlist=datos.habilidad;
     });
   }
-  public  colorConic(colorfuerte:string, colordebil:string, porcentaje:string){
-    return `conic-gradient(${colorfuerte} ${porcentaje},${colordebil} ${porcentaje})`;
+  public  colorConic(porcentaje:string){
+    return `conic-gradient(#e47711 ${porcentaje},#f7bc7a ${porcentaje})`;
   }
 }
