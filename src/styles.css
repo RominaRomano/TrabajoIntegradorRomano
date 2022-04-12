@@ -65,14 +65,16 @@ body { /*aplica a todo lo que esté en el body del html*/
   font-size: 1.5rem;
   font-family: var(--bs-body-font-family);
   border-radius: .75rem;
+  display:none; /* esto debería cambiar inline-flex cuando el usuario tenga permisos para editar */
 }
 .botoncito-verde:hover {
   color: var(--color-int-encendido);
   background-color:var(--color-boton-encendido);
 }
+/* esto se debería habilitar cuando el usuario tenga permiso de editar
 .botoncito-flex{
   display:inline-flex;
-}
+}*/
 .redondear {
   border-radius: 100%;
 }
