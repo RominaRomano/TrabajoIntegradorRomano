@@ -1,0 +1,21 @@
+<section class="modal">
+    <div class="modal-edu">
+        <div class="formulario">
+            <button class="cerrar" (click)="cierraModal()">X</button>    
+            <h1 class="mb-3">Edición de Sección Habilidades</h1>
+            <form [formGroup]="form" (ngSubmit)="onEnviar($event)"> <!----> <!--  action="#"    method="post"-->
+                <div class="d-flex">
+                    <label class="form-label" for="Nombre" > 
+                        <span>Icono o Siglas de la Habilidad: </span>
+                        <input class="form-control" type="text" name="Nombre" value={{nombre}} id="Nombre" placeholder="Ingrese ícono o nombre breve de la Habilidad" autocomplete="Nombre" [disabled]=baja> <!--formControlName="nombre"  -->
+                    </label>
+                    <label class="form-label ml-1" for="Porcentaje" > 
+                        <span>Porcentaje de dominio: </span>
+                        <input class="form-control" type="text" name="Porcentaje" value={{porcentaje}} id="Porcentaje" placeholder="Ingrese el % de dominio" autocomplete="Porcentaje" [disabled]=baja> <!--formControlName="titulo" -->
+                    </label>
+                </div>
+                <button type="submit" class="boton-confirma" (click)="ventanaConfirma()">{{mensajeBoton}}</button>
+            </form>
+        </div>
+    </div>
+</section>

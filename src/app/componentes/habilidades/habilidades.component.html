@@ -3,7 +3,7 @@
 <section class="pd-section alterna-color mb-5">
     <div class="botoncito-flex mb-5 ">
         <h1 class="titulo">Habilidades</h1>
-        <button class="ml-5 botoncito-verde"><i class="fas fa-plus"></i></button>
+        <button class="ml-5 botoncito-verde" (click)="abreModal('Alta',null)"><i class="fas fa-plus"></i></button>
     </div>
     <h3 class="subtitulo mb-5">de las Duras y de las Blandas</h3>
     <div class="container_grafico">
@@ -11,9 +11,13 @@
             <p class="textgraf"><i class={{habilidad.icono}}></i></p>
             <p class="porcgraf">{{habilidad.porcentaje}}</p>
             <div class="botoncito-skill">
-                <button class="botoncito-verde"><i class="fas fa-edit"></i></button>    
-                <button class="botoncito-verde"><i class="fas fa-trash-alt"></i></button>
+                <button class="botoncito-verde" (click)="abreModal('Modificación',habilidad)"><i class="fas fa-edit"></i></button>    
+                <button class="botoncito-verde" (click)="abreModal('Baja',habilidad)"><i class="fas fa-trash-alt"></i></button>
             </div>
         </div>    
     </div>
 </section>
+
+<div *ngIf="modalSwitch==true">
+    <app-modal-habilidades proceso={{procesoABM}} [habilidad]="habilidadModBaj"></app-modal-habilidades>
+</div>

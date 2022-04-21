@@ -16,6 +16,9 @@ import { InterceptorService } from './servicios/interceptor.service';
 import { AutenticacionService } from './servicios/autenticacion.service';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ModalEducacionComponent } from './componentes/modal-educacion/modal-educacion.component';
+import { ModalExperienciaComponent } from './componentes/modal-experiencia/modal-experiencia.component';
+import { ModalHabilidadesComponent } from './componentes/modal-habilidades/modal-habilidades.component';
+import { ModalProyectosComponent } from './componentes/modal-proyectos/modal-proyectos.component';
 
 
 @NgModule({
@@ -28,7 +31,10 @@ import { ModalEducacionComponent } from './componentes/modal-educacion/modal-edu
     HabilidadesComponent,
     ProyectosComponent,
     ModalLoginComponent,
-    ModalEducacionComponent
+    ModalEducacionComponent,
+    ModalExperienciaComponent,
+    ModalHabilidadesComponent,
+    ModalProyectosComponent
   ],
   imports: [
     BrowserModule,

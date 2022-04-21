@@ -3,7 +3,7 @@
 <section class="pd-section alterna-color mb-5">
     <div class="botoncito-flex mb-5 ">
         <h1 class="titulo">Experiencias Laborales</h1>
-        <button class="ml-5 botoncito-verde"><i class="fas fa-plus"></i></button>
+        <button class="ml-5 botoncito-verde" (click)="abreModal('Alta',null)"><i class="fas fa-plus"></i></button>
     </div>
     <div class="d-flex mb-5" *ngFor="let experiencia of experiencialist"> 
         <div class="flex-grow-1">
@@ -13,8 +13,12 @@
             <p *ngIf="experiencia.contacto !==''">Contacto: {{experiencia.contacto}}</p>
         </div>
         <div class="flex-shrink-0">
-            <button class="botoncito-verde botoncito-flex"><i class="fas fa-edit"></i></button>
-            <button class="botoncito-verde botoncito-flex"><i class="fas fa-trash-alt"></i></button>
+            <button class="botoncito-verde botoncito-flex" (click)="abreModal('Modificación',experiencia)"><i class="fas fa-edit"></i></button>
+            <button class="botoncito-verde botoncito-flex" (click)="abreModal('Baja',experiencia)"><i class="fas fa-trash-alt"></i></button>
             <span class="texto-color">{{experiencia.fechini}} - {{experiencia.fechfin}}</span></div>
     </div>
 </section>
+
+<div *ngIf="modalSwitch==true">
+    <app-modal-experiencia proceso={{procesoABM}} [experiencia]="experienciaModBaj"></app-modal-experiencia>
+</div>
