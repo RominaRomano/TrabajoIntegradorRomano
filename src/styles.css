@@ -65,16 +65,16 @@ body { /*aplica a todo lo que esté en el body del html*/
   font-size: 1.5rem;
   font-family: var(--bs-body-font-family);
   border-radius: .75rem;
-  display:none; /* esto debería cambiar inline-flex cuando el usuario tenga permisos para editar */
+  /*display:none; /* esto debería cambiar inline-flex cuando el usuario tenga permisos para editar */
 }
 .botoncito-verde:hover {
   color: var(--color-int-encendido);
   background-color:var(--color-boton-encendido);
 }
-/* esto se debería habilitar cuando el usuario tenga permiso de editar
+/* esto se debería habilitar cuando el usuario tenga permiso de editar*/
 .botoncito-flex{
   display:inline-flex;
-}*/
+}
 .redondear {
   border-radius: 100%;
 }
@@ -93,6 +93,14 @@ body { /*aplica a todo lo que esté en el body del html*/
 .flex-shrink-0 {
   flex-shrink: 0;
 }
+.ml-5 {
+  margin-left: 5rem;
+}
+
+.ml-1 {
+  margin-left: 1rem;
+}
+
 .mb-0 {
   margin-bottom: 0;
 }
@@ -138,3 +146,105 @@ body { /*aplica a todo lo que esté en el body del html*/
 .alterna-color{
   background-color:var(--seccion-oscura);
 }
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #111111bd;
+  display: flex;
+  z-index: 2;
+  }
+  
+  .modal-edu {
+    width: 50%;
+    max-width: 80rem;
+    max-height: 90%;
+    padding: 2% 0 0;
+    margin: auto;
+  }
+
+  .modal-log {
+    width: 90%;
+    max-width: 60rem;
+    max-height: 90%;
+    padding: 8% 0 0;
+    margin: auto;
+  }
+
+
+
+
+  .cerrar {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: var(--color-boton-apagado);
+    color: var(--color-int-apagado);
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  .cerrar:hover {
+    background:var(--color-boton-encendido);
+    color:var(--color-int-encendido);
+  }
+  
+  .formulario {
+    position: relative;
+    background:var(--seccion-clara);
+    border-radius: 1.5rem;
+    margin: 0 auto 10rem;
+    padding: 3rem;
+    text-align: center;
+    max-width: max-content;
+  }
+
+  .formulario input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background:var(--seccion-oscura);
+    width: 100%;
+    border: 0;
+    margin: 0 0 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+  }
+
+  .boton-confirma {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background:var(--color-boton-apagado);
+    width: 100%;
+    border: 0;
+    padding: 1rem;
+    color:var(--color-int-apagado);
+    font-size: 1.5rem;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    margin-top: .8rem;
+    border-radius: 1rem;
+  }
+  .boton-confirma:hover,.boton-confirma:active,.boton-confirma:focus {
+    background:var(--color-boton-encendido);
+    color: var(--color-int-encendido);
+  }
+  .formulario .mensaje {
+    margin: 1.5rem 0 0;
+    color: #161515b9;
+    font-size: 1.2rem;
+  }
+  .formulario .mensaje a {
+    color: var(--color-boton-encendido);
+    text-decoration: none;
+  }

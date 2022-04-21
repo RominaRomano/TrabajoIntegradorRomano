@@ -6,7 +6,10 @@ esta sección con imágenes de los proyectos.-->
 <!--MIS PROYECTOS-->
             
 <section class="pd-section mb-5">
-    <h1 class="titulo mb-5">Mis Proyectos</h1>
+    <div class="botoncito-flex mb-5 ">
+        <h1 class="titulo">Mis Proyectos</h1>
+        <button class="ml-5 botoncito-verde"><i class="fas fa-plus"></i></button>
+    </div>
     <div class="d-flex mb-5" *ngFor="let proyecto of proyectolist">
         <img [src]="proyecto.imagen" alt="Imagen del Proyecto" class="LogoCuad">
         <div class="flex-grow-1">

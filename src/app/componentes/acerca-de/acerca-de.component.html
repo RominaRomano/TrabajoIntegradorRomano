@@ -1,13 +1,14 @@
     <!--ACERCA DE-->
 
     <section class="pd-section mb-5"> 
-        <h1 class="titulo mb-2"><span>{{miPortfolio.nombape}}</span>
-        <button class="botoncito-verde botoncito-flex"><i class="fas fa-edit"></i></button></h1>
-        <div class="subtitulo mb-3">
-            {{miPortfolio.direccion}} 
-            <a href={{mail}}>Enviame un E-mail</a>
+        <div class="flota-derecha">
             <button class="botoncito-verde botoncito-flex"><i class="fas fa-edit"></i></button>
-            <button class="botoncito-verde botoncito-flex"><i class="fas fa-trash-alt"></i></button>
+            <button class="botoncito-verde botoncito-flex"><i class="fas fa-trash-alt"></i></button></div>
+        <h1 class="titulo mb-2"><span>{{miPortfolio.nombape}}</span></h1>
+        <div class="subtitulo mb-3">
+<!--            {{miPortfolio.direccion}} -->
+            <p>Forma de contacto: </p>
+            <a href={{mail}}>Enviame un E-mail</a>
         </div>
         <p class="intro">{{miPortfolio.acercade}}</p>
     </section>
