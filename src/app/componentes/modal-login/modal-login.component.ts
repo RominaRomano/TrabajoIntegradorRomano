@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SwitchService } from 'src/app/servicios/switch.service';
+//import { SwitchService } from 'src/app/servicios/switch.service';
 import Swal from 'sweetalert2';
 import 'sweetalert2/src/sweetalert2.scss';
 import {Router} from '@angular/router';
@@ -15,55 +15,42 @@ import {AutenticacionService} from 'src/app/servicios/autenticacion.service';
 })
 export class ModalLoginComponent implements OnInit {
   form: FormGroup;
-  constructor(private modalSS:SwitchService, private formBuilder:FormBuilder, private autenticacionService:AutenticacionService, private rutas:Router) {
+  constructor(private formBuilder:FormBuilder, private autenticacionService:AutenticacionService, private rutas:Router) {
     this.form=this.formBuilder.group(
       {
-      nombre:['',[Validators.required]],
+      email:['',[Validators.required, Validators.email]],
       password:['',[Validators.required,Validators.minLength(8)]]});
   }
 
   ngOnInit(): void {
   }
 
-  cierraModal(){
-    this.modalSS.$modal.emit(false);
-  }
-
-  
-  ventanaConfirma(errorUser:any,errorPass:any){
-    if(!errorUser && !errorPass){
-      Swal.fire({
-        icon: 'success',
-        title: 'Confirmado!!',
-        text: 'Bienvenido al Area Administrativa!!',
-      })
-    }
-    else{
+  ventanaError(){
       Swal.fire({
         icon: 'error',
         title: 'Verifique....',
-        text: 'Haber ingresado todos los datos',
+        text: 'Haber ingresado todos los datos y de forma correcta.',
       })
     }
-/*      Swal.fire({
-      icon: 'error',
-      title: 'Problemas!!',
-      text: 'Usted no está resgistrado como Administrador/a',
-    })*/
-}
 
-
-  get Usuario()
-  {return this.form.get('nombre');}
+  get Email()
+  {return this.form.get('email');}
 
   get Password()
   {return this.form.get('password');}
 
   onEnviar(event:Event){
     event.preventDefault;
-    this.autenticacionService.IniciarSesion(this.form.value).subscribe(data=>{
-      console.log("DATA"+JSON.stringify(data));
-      this.rutas.navigate(['/app-component'])
-    })
+    this.autenticacionService.IniciarSesion(this.form.value).subscribe(
+    (response: Boolean) => {
+      if (response)
+        this.rutas.navigate(['/home']);
+      else
+        Swal.fire({
+          icon: 'error',
+          title: 'Atención!',
+          text: 'Las credenciales ingresadas no existen en nuestros registros.',
+        })
+    });
   }
 }

@@ -1,24 +1,34 @@
 <section class="modal">
     <div class="modal-log">
         <div class="formulario">
-            <button class="cerrar" (click)="cierraModal()">X</button>    
+            <button class="cerrar" routerLink="/home">X</button>
             <h1 class="mb-3">Inicio de Sesión</h1>
-            <form [formGroup]="form" (ngSubmit)="onEnviar($event)">  <!--  action="#"    method="post"-->
+            <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
                 <div>
-                    <label class="form-label" for="Username" > 
-                        <span>Nombre de Usuario: </span>
-                        <input class="form-control" type="text" formControlName="nombre" id="Username" placeholder="Tu nombre de Usuario">
-                        <!-- name="Username" autocomplete="name" required=""   -->
+                    <label class="form-label" for="email" > 
+                        <span>Ingrese su Email: </span>
+                        <input class="form-control" type="text" formControlName="email" name="email" placeholder="Su email de Usuario" required> 
                     </label>
+                    <div *ngIf="Email?.errors && Email?.touched">
+                        <div *ngIf="Email?.hasError('required')" class="aviso"><span>El email es requerido.</span></div>
+                        <div *ngIf="Email?.hasError('email')" class="aviso"><span>El email ingresado no respeta el formato esperado.</span></div>
+                    </div>
                 </div>
                 <div>
                     <label class="form-label" for="password">
                         <span>Contraseña: </span>
-                        <input class="form-control" type="password" formControlName="password" id="password" placeholder="Tu contraseña">
-                        <!-- name="password" required="" -->
+                        <input class="form-control" type="password" name="password" formControlName="password" id="password" placeholder="Su contraseña" required>
                     </label>
-                </div>
-                <button type="submit" class="boton-confirma" (click)="ventanaConfirma(Usuario?.hasError('required'),Password?.hasError('required'))">iniciar sesion como administrador/a</button>
+                    <div *ngIf="Password?.errors && Password?.touched">
+                        <div *ngIf="Password?.hasError('required')" class="aviso"><span>La contraseña es requerida.</span> </div>
+                        <div *ngIf="Password?.hasError('minLength')" class="aviso"><span>La contrasena debe tener 8 o mas caracteres</span></div>
+                    </div>
+                    <div [hidden]="!form.invalid"class="aviso">
+                        <p>Para visualizar el botón de Ingreso a la Edición debe</p>
+                        <p>  ingresar su E-mail y su contraseña (no menor a 8 caracteres).  </p>
+                    </div>
+                  </div>
+                  <button type="submit" [hidden]="form.invalid" class="boton-confirma" >iniciar sesion como administrador/a</button> <!--(click)="ventanaConfirma(Email?.hasError('required'),Password?.hasError('required'))"-->
             <!--Dejo planteada la posibilidad de hacer Registraciones en Base de Datos-->
             <!--<p class="mensaje">Aún no estás registrado/a? <a href="#">Registrate Ahora!</a></p>-->
             </form>

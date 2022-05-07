@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { SwitchService } from 'src/app/servicios/switch.service';
+import { Habilidad } from 'src/app/data/Habilidad';
+import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
 
 @Component({
   selector: 'app-habilidades',
@@ -9,15 +11,17 @@ import { SwitchService } from 'src/app/servicios/switch.service';
 })
 export class HabilidadesComponent implements OnInit {
   modalSwitch:boolean=false;
-  habilidadlist:any;
+  UsuaLog:boolean=false;
+  habilidadlist:Habilidad[]=[];
   procesoABM:string="";
   habilidadModBaj:any;
-  constructor(private datosPortfolio:PortfolioService, private modalSS:SwitchService) { }
+  constructor(private datosPortfolio:PortfolioService, private modalSS:SwitchService, private autService:AutenticacionService) { }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(datos=>{
-      this.habilidadlist=datos.habilidad;
+    this.datosPortfolio.obtenerDatosHabilidad().subscribe(datos=>{
+      this.habilidadlist=datos;
       //console.log(datos);
+      this.UsuaLog = this.autService.UsuarioLoggeado();
       this.modalSS.$modal.subscribe((valor)=> {this.modalSwitch=valor});
     });
   }

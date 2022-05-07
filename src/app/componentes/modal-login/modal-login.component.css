@@ -1,0 +1,9 @@
+.aviso {
+    border-style:inset;
+    border-width: 0.1rem;
+    border-radius: 0.5rem;
+    border-color: var(--color-icono-apagado);
+    color:var(--color-icono-apagado);
+    padding: .8rem;
+    margin: .8rem;
+}

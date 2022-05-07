@@ -12,13 +12,13 @@ import { PortfolioService } from './servicios/portfolio.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalLoginComponent } from './componentes/modal-login/modal-login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { InterceptorService } from './servicios/interceptor.service';
 import { AutenticacionService } from './servicios/autenticacion.service';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ModalEducacionComponent } from './componentes/modal-educacion/modal-educacion.component';
 import { ModalExperienciaComponent } from './componentes/modal-experiencia/modal-experiencia.component';
 import { ModalHabilidadesComponent } from './componentes/modal-habilidades/modal-habilidades.component';
 import { ModalProyectosComponent } from './componentes/modal-proyectos/modal-proyectos.component';
+import { PortfolioComponent } from './componentes/portfolio/portfolio.component';
 
 
 @NgModule({
@@ -34,7 +34,8 @@ import { ModalProyectosComponent } from './componentes/modal-proyectos/modal-pro
     ModalEducacionComponent,
     ModalExperienciaComponent,
     ModalHabilidadesComponent,
-    ModalProyectosComponent
+    ModalProyectosComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,
@@ -43,8 +44,7 @@ import { ModalProyectosComponent } from './componentes/modal-proyectos/modal-pro
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [PortfolioService, { 
-    provide:HTTP_INTERCEPTORS,useClass:InterceptorService,multi:true}
+  providers: [PortfolioService
   ],
   bootstrap: [AppComponent]
 })

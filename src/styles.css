@@ -174,9 +174,6 @@ body { /*aplica a todo lo que esté en el body del html*/
     margin: auto;
   }
 
-
-
-
   .cerrar {
     position: absolute;
     top: .5rem;
@@ -239,6 +236,7 @@ body { /*aplica a todo lo que esté en el body del html*/
     background:var(--color-boton-encendido);
     color: var(--color-int-encendido);
   }
+
   .formulario .mensaje {
     margin: 1.5rem 0 0;
     color: #161515b9;

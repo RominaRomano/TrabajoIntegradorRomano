@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
-import { SwitchService } from 'src/app/servicios/switch.service';
+import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
 
 @Component({
   selector: 'app-encabezado',
@@ -9,21 +9,20 @@ import { SwitchService } from 'src/app/servicios/switch.service';
 })
 export class EncabezadoComponent implements OnInit {
   
-  modalSwitch:boolean=false;
   miPortfolio:any;
+  UsuaLog:boolean=false;
   
-  constructor(private datosPortfolio:PortfolioService, private modalSS:SwitchService) { }
+  constructor(private datosPortfolio:PortfolioService, private autService:AutenticacionService) { }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(datos=>{
-      this.miPortfolio=datos;});
-      //console.log(datos);
-    this.modalSS.$modal.subscribe((valor)=> {this.modalSwitch=valor});
+    this.datosPortfolio.obtenerDatosPersona().subscribe(datos=>{
+      this.miPortfolio = datos[0]; });
+    this.UsuaLog = this.autService.UsuarioLoggeado();
   }
 
-  public abreModal(){
-    this.modalSwitch=true;
-    //console.log(this.modalSwitch);
+  logout(): void {
+    this.autService.logout();
+    this.UsuaLog = false;
+    window.location.reload();
   }
-
 }

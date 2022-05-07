@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 import { SwitchService } from 'src/app/servicios/switch.service';
+import { Educacion } from 'src/app/data/Educacion';
+import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
 
 @Component({
   selector: 'app-educacion',
@@ -8,16 +10,20 @@ import { SwitchService } from 'src/app/servicios/switch.service';
   styleUrls: ['./educacion.component.css']
 })
 export class EducacionComponent implements OnInit {
+  
   modalSwitch:boolean=false;
-  educacionlist:any;
+  UsuaLog:boolean=false;
+  educacionlist:Educacion[]=[];
   procesoABM:string="";
   escuelaModBaj:any;
-  constructor(private datosPortfolio:PortfolioService, private modalSS:SwitchService) { }
+
+  constructor(private datosPortfolio:PortfolioService, private modalSS:SwitchService, private autService:AutenticacionService) { }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(datos=>{
-      this.educacionlist=datos.educacion;
+    this.datosPortfolio.obtenerDatosEducacion().subscribe(datos=>{
+      this.educacionlist = datos;
       //console.log(datos);
+      this.UsuaLog = this.autService.UsuarioLoggeado();
       this.modalSS.$modal.subscribe((valor)=> {this.modalSwitch=valor});
     });
   }

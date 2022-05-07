@@ -2,13 +2,13 @@
 
     <section class="pd-section mb-5"> 
         <div class="flota-derecha">
-            <button class="botoncito-verde botoncito-flex"><i class="fas fa-edit"></i></button>
-            <button class="botoncito-verde botoncito-flex"><i class="fas fa-trash-alt"></i></button></div>
+            <button *ngIf="UsuaLog" class="botoncito-verde botoncito-flex"><i class="fas fa-edit"></i></button>
+            <button *ngIf="UsuaLog" class="botoncito-verde botoncito-flex"><i class="fas fa-trash-alt"></i></button></div>
         <h1 class="titulo mb-2"><span>{{miPortfolio.nombape}}</span></h1>
         <div class="subtitulo mb-3">
-<!--            {{miPortfolio.direccion}} -->
+            {{miPortfolio.direccion}}
             <p>Forma de contacto: </p>
             <a href={{mail}}>Enviame un E-mail</a>
         </div>
-        <p class="intro">{{miPortfolio.acercade}}</p>
+        <p class="intro">Mi edad es de {{edad}} años. {{miPortfolio.acercade}}</p>
     </section>

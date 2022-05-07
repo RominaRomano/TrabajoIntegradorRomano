@@ -1,10 +1,11 @@
 {
-"dirBanner":"./assets/img/BannerRomi.jpg",
-"dirPerfil":"./assets/img/FotoPerfil.jpg",
+"dirBanner":"C:/Users/roder/Desktop/ARG-PROG/TrabajoIntegrador/src/assets/img/BannerRomi.jpg",
+"dirPerfil":"./assets/img/FotoPerfil.JPG",
 "nombape":"ROMINA D. ROMANO",
-"direccion":"Pueyrredón 1440 - Capilla del Monte - Córdoba - C.P. 5184 - ",
+"direccion":"Capilla del Monte - Córdoba - Argentina",
 "email":"roderomano@gmail.com",
-"acercade":"Tengo experiencia en el manejo y administración de Bases de Datos, procesamiento de la información y vistas diseñadas para una presentación agradable y significativa al usuario. Estoy siempre dispuesta a aprender y compartir mis conocimientos, tanto en relación a las nuevas tecnologías, como al intercambio entre colegas.",
+"acercade":"Tengo conocimientos de Bases de Datos, procesamiento de la información y vistas diseñadas para una presentación agradable y significativa. Estoy siempre dispuesta a aprender e intercambiar conocimientos con mis colegas. Soy sincera y responsable.",
+"fechNac":"06/18/1976",
 "experiencia":[
     {
     "puesto":"Profesora de Matemática y Preceptora",
