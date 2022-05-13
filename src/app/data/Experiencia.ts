@@ -1,4 +1,5 @@
 export interface Experiencia {
+    id:0,
     puesto: string,
     empresa: string,
     tarea: string,

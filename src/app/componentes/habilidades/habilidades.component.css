@@ -1,4 +1,3 @@
-
 .container_grafico{
     display: flex;
     flex-wrap: wrap;
@@ -12,7 +11,7 @@
   height: 10rem;
   border-radius: 50%;
   /*background-image: conic-gradient(color %, color %) lo resolví usando una función en el js que devolviera
-  el string que iba en el ngStyle usado para cada ngFor ya que cada gráfico tiene un porcentaje traído desde json*/
+  el string que iba en el ngStyle usado para cada *ngFor ya que cada gráfico tiene un porcentaje traído desde Json*/
 }
 .botoncito-skill{
     left: 1rem;

@@ -11,13 +11,13 @@ import { LoginDto } from '../data/LoginDto';
 
 export class AutenticacionService {
 
-  constructor(private http: HttpClient) {console.log("El servicio de autenticación está corriendo");}
+  constructor(private http: HttpClient) {/*console.log("El servicio de autenticación está corriendo")*/;}
 
   public IniciarSesion(credentials:LoginDto) : Observable<Boolean> {
-    return this.http.post<Boolean>(config.baseUrl + "iniciar-sesion", credentials).pipe(
+    return this.http.post<Boolean>(config.url + "iniciar-sesion", credentials).pipe(  // Envía credenciales a Back-End
       tap((response: Boolean) => {
-        if (response)
-          sessionStorage.setItem("UsuaLog", "true");
+        if (response)   // Si las credenciales fueron correctas
+          sessionStorage.setItem("UsuaLog", "true");  // Cambia el valor de la bandera UsuaLog (permitiendo así botnones de Edición)
       })
     );
   }

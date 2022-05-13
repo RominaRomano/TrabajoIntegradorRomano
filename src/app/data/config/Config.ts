@@ -1,3 +1,5 @@
+// RUTA BÁSICA DE PETICIONES AL BACK-END
+
 export const config = {
-    baseUrl: "http://localhost:8080/"
+    url: "http://localhost:8080/"
 }

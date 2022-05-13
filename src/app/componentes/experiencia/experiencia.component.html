@@ -1,11 +1,11 @@
-<!-- EXPERIENCIA-->
+<!-- EXPERIENCIAS LABORALES-->
 
 <section class="pd-section alterna-color mb-5">
     <div class="botoncito-flex mb-5 ">
         <h1 class="titulo">Experiencias Laborales</h1>
-        <button *ngIf="UsuaLog" class="ml-5 botoncito-verde" (click)="abreModal('Alta',null)"><i class="fas fa-plus"></i></button>
+        <button *ngIf="UsuaLog" class="ml-5 botoncito-verde" (click)="Alta()"><i class="fas fa-plus"></i></button>
     </div>
-    <div class="d-flex mb-5" *ngFor="let experiencia of experiencialist"> 
+    <div class="d-flex mb-5" *ngFor="let experiencia of experiencialist; let i = index"> 
         <div class="flex-grow-1">
             <h3 class="subtitulo mb-0">{{experiencia.puesto}}</h3>
             <p class="minisubtitulo mb-3">{{experiencia.empresa}}</p>
@@ -13,12 +13,54 @@
             <p *ngIf="experiencia.contacto !==''">Contacto: {{experiencia.contacto}}</p>
         </div>
         <div class="flex-shrink-0">
-            <button *ngIf="UsuaLog" class="botoncito-verde botoncito-flex" (click)="abreModal('Modificación',experiencia)"><i class="fas fa-edit"></i></button>
-            <button *ngIf="UsuaLog" class="botoncito-verde botoncito-flex" (click)="abreModal('Baja',experiencia)"><i class="fas fa-trash-alt"></i></button>
-            <span class="texto-color">{{experiencia.fechini}} - {{experiencia.fechfin}}</span></div>
+            <button *ngIf="UsuaLog" class="botoncito-verde botoncito-flex" (click)="Modificacion(i)"><i class="fas fa-edit"></i></button>
+            <button *ngIf="UsuaLog" class="botoncito-verde botoncito-flex" (click)="Baja(i)"><i class="fas fa-trash-alt"></i></button>
+            <span class="texto-color">{{experiencia.fechini}} - {{experiencia.fechfin}}</span>
+        </div>
     </div>
 </section>
 
-<div *ngIf="modalSwitch==true">
-    <app-modal-experiencia proceso={{procesoABM}} [experiencia]="experienciaModBaj"></app-modal-experiencia>
+<!-- MODAL PARA CRUD -->
+<div *ngIf="modalSwitch">
+    <section class="modal">
+        <div class="modal-arreglo">
+            <div class="formulario">
+                <button class="cerrar" (click)="cierraModal()">X</button>    
+                <h1 class="mb-3">Edición de Sección Experiencia Laboral</h1>
+                <form [formGroup]="form" (ngSubmit)="onEnviar()">
+                    <div>
+                        <div class="d-flex">
+                            <label class="form-label" for="Empresa" > 
+                                <span>Nombre de la Empresa: </span>
+                                <input class="form-control" type="text" formControlName="empresa" placeholder="Ingrese el nombre de la Empresa" [readonly]=baja> 
+                            </label>
+                            <label class="form-label ml-1" for="Puesto" > 
+                                <span>Puesto desempeñado: </span>
+                                <input class="form-control" type="text" name="Puesto" formControlName="puesto" id="Puesto" placeholder="El puesto que ocupaste" autocomplete="Puesto" [readonly]=baja>
+                            </label>
+                        </div>
+                        <label class="form-label" for="Tarea" > 
+                            <span>Breve descripción de tareas realizadas: </span>
+                            <input class="form-control" type="text" name="Tarea" formControlName="tarea" id="Tarea" placeholder="Escribe una breve descripción..." autocomplete="Tarea" [readonly]=baja>
+                        </label>
+                        <label class="form-label" for="Contacto" > 
+                            <span>Contacto: </span>
+                            <input class="form-control" type="text" name="Contacto" formControlName="contacto" id="Contacto" placeholder="Contacto de su empleador" autocomplete="Contacto" [readonly]=baja>
+                        </label>
+                        <div class="d-flex">
+                            <label class="form-label" for="FechIni" >
+                                <span>Fecha en que iniciaste en la empresa: </span>
+                                <input class="form-control" type="text" name="Fechini" formControlName="fechini" id="Fechini" placeholder="Mes y año en que iniciaste tus estudios" autocomplete="Fechini" [readonly]=baja>
+                            </label>
+                            <label class="form-label ml-1" for="FechFin" > 
+                                <span>Fecha en que finalizaste en la empresa: </span>
+                                <input class="form-control" type="text" name="Fechfin" formControlName="fechfin" id="Fechfin" placeholder="Mes y año en que concluiste tus estudios" autocomplete="Fechfin" [readonly]=baja>
+                            </label>
+                        </div>
+                        <button type="submit" class="boton-confirma">Confirmar {{mensajeBoton}} de la Experiencia</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
 </div>

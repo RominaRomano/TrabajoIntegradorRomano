@@ -1,14 +1,50 @@
-    <!--ACERCA DE-->
+<!-- SECCIÓN ACERCA DE -->
 
-    <section class="pd-section mb-5"> 
-        <div class="flota-derecha">
-            <button *ngIf="UsuaLog" class="botoncito-verde botoncito-flex"><i class="fas fa-edit"></i></button>
-            <button *ngIf="UsuaLog" class="botoncito-verde botoncito-flex"><i class="fas fa-trash-alt"></i></button></div>
-        <h1 class="titulo mb-2"><span>{{miPortfolio.nombape}}</span></h1>
-        <div class="subtitulo mb-3">
-            {{miPortfolio.direccion}}
-            <p>Forma de contacto: </p>
-            <a href={{mail}}>Enviame un E-mail</a>
+<section class="pd-section mb-5"> 
+    <div class="flota-derecha">
+        <button *ngIf="UsuaLog" class="botoncito-verde botoncito-flex" (click)="Editar()"><i class="fas fa-edit"></i></button>
+    </div>
+    <h1 class="titulo mb-2"><span>{{miPortfolio.nombape}}</span></h1>
+    <div class="subtitulo mb-3">
+        {{miPortfolio.direccion}}
+        <p>Forma de contacto: </p>
+        <a href={{mail}}>Enviame un E-mail</a>
+    </div>
+    <p class="intro">Mi edad es de {{edad}} años. {{miPortfolio.acercade}}</p>
+</section>
+
+<!-- MODAL PARA CRUD -->
+
+<div *ngIf="modalSwitch">
+    <section class="modal">
+        <div class="modal-arreglo">
+            <div class="formulario">
+                <button class="cerrar" (click)="cierraModal()">X</button>    
+                <h1 class="mb-3">Edición de Sección Acerca de...</h1>
+                <form [formGroup]="form" (ngSubmit)="onEnviar()">
+                    <div>
+                        <div class="d-flex">
+                            <label class="form-label" for="NombApe" > 
+                                <span>Nombres y Apellidos: </span>
+                                <input class="form-control" type="text" formControlName="nombape" id="NombApe" name="NombApe" autocomplete="Nombre" placeholder="Ingrese el/los nombres y apellido/s.">
+                            </label>
+                            <label class="form-label ml-1" for="Direccion" > 
+                                <span>Ubicación (Localidad y Provincia): </span>
+                                <input class="form-control" type="text" name="Direccion" formControlName="direccion" id="Direccion" placeholder="La ubicación donde reside" autocomplete="Direccion">
+                            </label>
+                        </div>
+                        <label class="form-label" for="email" > 
+                            <span>Ingrese su Email: </span>
+                            <input class="form-control" type="email" formControlName="email" name="email" placeholder="Su email de Usuario" required> 
+                        </label>
+                        <label class="form-label" for="AcercaDe" >
+                            <span>Escribe una breve descripción de tu persona: </span>
+                            <input class="form-control" type="text" name="AcercaDe" formControlName="acercade" id="AcercaDe" placeholder="Describe brevemente tu personalidad y tu desempeño." autocomplete="AcercaDe">
+                        </label>
+                    </div>
+                    <button type="submit" class="boton-confirma">Confirmar las modificaciones realizadas</button>
+                </form>
+            </div>
         </div>
-        <p class="intro">Mi edad es de {{edad}} años. {{miPortfolio.acercade}}</p>
     </section>
+</div>

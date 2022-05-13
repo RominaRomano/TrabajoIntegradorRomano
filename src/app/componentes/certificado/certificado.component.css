@@ -1,0 +1,32 @@
+h1 {
+    text-align: center;
+  }
+  
+  .carrusel {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .carrusel ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-width: 60rem;
+    scroll-behavior: smooth;
+  }
+  
+  .carrusel-fotos {
+    display: flex;
+    gap: 1rem;
+    overflow:auto;
+    position: relative;
+  }
+  
+  .carrusel-fotos img {
+    background: #5c4639;
+    border: .4rem solid #5c4639;
+    width: 60rem;
+    height: 30rem;
+    object-fit: contain;  
+  }

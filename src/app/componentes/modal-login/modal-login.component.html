@@ -1,3 +1,5 @@
+<!-- MODAL PARA INICIO DE SESIÓN -->    <!-- Css Específico en el componente -->
+
 <section class="modal">
     <div class="modal-log">
         <div class="formulario">
@@ -24,8 +26,10 @@
                         <div *ngIf="Password?.hasError('minLength')" class="aviso"><span>La contrasena debe tener 8 o mas caracteres</span></div>
                     </div>
                     <div [hidden]="!form.invalid"class="aviso">
-                        <p>Para visualizar el botón de Ingreso a la Edición debe</p>
-                        <p>  ingresar su E-mail y su contraseña (no menor a 8 caracteres).  </p>
+                        <p>Para visualizar el botón de</p>
+                        <p>Ingreso a la Edición debe</p>
+                        <p>ingresar su E-mail y su contraseña </p>
+                        <p>(no menor a 8 caracteres).  </p>
                     </div>
                   </div>
                   <button type="submit" [hidden]="form.invalid" class="boton-confirma" >iniciar sesion como administrador/a</button> <!--(click)="ventanaConfirma(Email?.hasError('required'),Password?.hasError('required'))"-->
@@ -36,9 +40,9 @@
     </div>
 <!--   <div class="ventana-modal">
         <div class="formulario">
-            <button class="cerrar" (click)="cierraModal()">X</button>
+            <button class="cerrar" routerLink="/home">X</button>
             <h1 class="mb-3">Registrate</h1>
-            <form action="#" method="post">
+            <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
                 <div>
                     <label for="Username">
                         <span>Nombre de Usuario: </span>

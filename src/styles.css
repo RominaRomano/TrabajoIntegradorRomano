@@ -5,9 +5,9 @@
   padding: 0;
 }
 html {
-  font-size: 62.5%;
+  font-size: 62.5%;   /* proporción de 1rem = 10px */
 }
-/* Declara variables globales */
+/* Declaro variables globales */
 :root {
   --bs-body-font-family: Muli, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --bs-body-line-height: 3rem;
@@ -23,12 +23,12 @@ html {
   --color-boton-apagado:#2c5e19;
   --color-boton-encendido:#6daf17;
 }
-body { /*aplica a todo lo que esté en el body del html*/
+body { /*aplico a todo lo que esté en el body del html*/
   font-family: var(--bs-body-font-family);
   line-height: var(--bs-body-line-height); /*Alto de las lineas*/
   color: var(--bs-body-color-sub); /*color de letras*/
   background-color:var(--seccion-clara); /*color de fondo*/
-  font-size: 1.5rem;
+  font-size: 1.5rem; /*tamaño letra*/
 }
 .LogoRect{
   height: 5rem;
@@ -65,13 +65,13 @@ body { /*aplica a todo lo que esté en el body del html*/
   font-size: 1.5rem;
   font-family: var(--bs-body-font-family);
   border-radius: .75rem;
-  /*display:none; /* esto debería cambiar inline-flex cuando el usuario tenga permisos para editar */
 }
+
 .botoncito-verde:hover {
   color: var(--color-int-encendido);
   background-color:var(--color-boton-encendido);
 }
-/* esto se debería habilitar cuando el usuario tenga permiso de editar*/
+
 .botoncito-flex{
   display:inline-flex;
 }
@@ -158,7 +158,7 @@ body { /*aplica a todo lo que esté en el body del html*/
   z-index: 2;
   }
   
-  .modal-edu {
+  .modal-arreglo {
     width: 50%;
     max-width: 80rem;
     max-height: 90%;
@@ -205,6 +205,18 @@ body { /*aplica a todo lo que esté en el body del html*/
   }
 
   .formulario input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background:var(--seccion-oscura);
+    width: 100%;
+    border: 0;
+    margin: 0 0 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+  }
+
+  .formulario select {
     font-family: "Roboto", sans-serif;
     outline: 0;
     background:var(--seccion-oscura);

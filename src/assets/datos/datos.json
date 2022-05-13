@@ -1,6 +1,6 @@
 {
-"dirBanner":"C:/Users/roder/Desktop/ARG-PROG/TrabajoIntegrador/src/assets/img/BannerRomi.jpg",
-"dirPerfil":"./assets/img/FotoPerfil.JPG",
+"dirBanner":"./assets/img/Banner1.jpg",
+"dirPerfil":"./assets/img/FotoPerfil1.JPG",
 "nombape":"ROMINA D. ROMANO",
 "direccion":"Capilla del Monte - Córdoba - Argentina",
 "email":"roderomano@gmail.com",
@@ -64,9 +64,10 @@
     "fechfin":"Febrero 1999"
     }
     ],
+
 "educacion":[
     {
-    "logo":"./assets/img/LogoIES.png",
+    "logo":"./assets/img/LogoEscu3.png",
     "nombre":"I.E.S. 'Arturo Capdevila'",
     "titulo":"Profesora de Matemática",
     "descripcion":"Recibida Mejor Promedio: 9.41",        
@@ -74,7 +75,7 @@
     "fechfin":"Diciembre 2007"
     },    
     {
-    "logo":"./assets/img/LogoUTN.png",
+    "logo":"./assets/img/LogoEscu2.png",
     "nombre":"U.T.N. (F.R.A.)",
     "titulo":"Analista de Sistemas",
     "descripcion":"Todas las asignaturas aprobadas - Tesis sin finalizar",        
@@ -82,7 +83,7 @@
     "fechfin":"Diciembre 1996"
     },  
     {
-    "logo":"./assets/img/LogoUTN.png",
+    "logo":"./assets/img/LogoEscu2.png",
     "nombre":"U.T.N. (F.R.A.)",
     "titulo":"Programadora",
     "descripcion":"Lenguajes de Programación: Pascal, Clipper, Cobol, C++",        
@@ -90,7 +91,7 @@
     "fechfin":"Diciembre 1995"
     },
     {
-    "logo":"./assets/img/LogoEES9.jpg",
+    "logo":"./assets/img/LogoEscu1.jpg",
     "nombre":"E.E.M. N° 9 - Villa Domínico",
     "titulo":"Bachiller Contable",
     "descripcion":"",        
@@ -98,79 +99,32 @@
     "fechfin":"Diciembre 1993"
     }    
     ],
-"habilidad":[
-    {
-    "icono":"fab fa-html5",
-    "porcentaje":"50%"
-    },    
-    {
-    "icono":"fab fa-css3-alt",
-    "porcentaje":"35%"
-    },    
-    {
-    "icono":"fab fa-angular",
-    "porcentaje":"30%"
-    },    
-    {
-    "icono":"fab fa-node-js",
-    "porcentaje":"5%"
-    },
-    {
-    "icono":"fab fa-bootstrap",
-    "porcentaje":"20%"
-    },
-    {
-    "icono":"fas fa-database",
-    "porcentaje":"30%"
-    },
-    {
-    "icono":"fab fa-github",
-    "porcentaje":"40%"
-    },
-    {
-    "icono":"fab fa-java",
-    "porcentaje":"50%"
-    },
-    {
-    "icono":"fab fa-js-square",
-    "porcentaje":"40%"
-    },                                        
-    {
-    "icono":"fab fa-php",
-    "porcentaje":"30%"
-    },
-    {
-    "icono":"fas fa-book-reader",
-    "porcentaje":"80%"
-    },
-    {
-    "icono":"fas fa-grin-alt",
-    "porcentaje":"75%"
-    },
-    {
-    "icono":"fas fa-people-carry",
-    "porcentaje":"65%"
-    },
-    {
-    "icono":"fas fa-lightbulb",
-    "porcentaje":"75%"
-    },
-    {
-    "icono":"fas fa-hand-holding-heart",
-    "porcentaje":"80%"
-    },
-    {
-    "icono":"fas fa-hourglass-half",
-    "porcentaje":"75%"
-    },
-    {
-    "icono":"fas fa-users",
-    "porcentaje":"65%"
-    }
-],
+
+    "habilidad":[
+    {"icono":"fab fa-angular",            "nombre":"Angular",                   "porcentaje":"50%"},
+    {"icono":"fab fa-bootstrap",          "nombre":"BootStrap",                 "porcentaje":"50%"},                   
+    {"icono":"fab fa-css3-alt",           "nombre":"CSS 3",                     "porcentaje":"50%"},
+    {"icono":"fas fa-database",           "nombre":"DataBase",                  "porcentaje":"50%"},
+    {"icono":"fab fa-github",             "nombre":"GitHub",                    "porcentaje":"50%"},
+    {"icono":"fab fa-html5",              "nombre":"HTML 5",                    "porcentaje":"50%"},    
+    {"icono":"fab fa-java",               "nombre":"Java",                      "porcentaje":"50%"},
+    {"icono":"fab fa-js-square",          "nombre":"JS Square",                 "porcentaje":"50%"},    
+    {"icono":"fab fa-node-js",            "nombre":"Node JS",                   "porcentaje":"50%"},
+    {"icono":"fab fa-php",                "nombre":"PHP",                       "porcentaje":"50%"},
+    {"icono":"fab fa-python",             "nombre":"Python",                    "porcentaje":"50%"},
+    {"icono":"fas fa-grin-alt",           "nombre":"* Actitud Positiva",        "porcentaje":"50%"},
+    {"icono":"fas fa-book-reader",        "nombre":"* Autodidacta",             "porcentaje":"50%"},
+    {"icono":"fas fa-lightbulb",          "nombre":"* Creatividad",             "porcentaje":"50%"},
+    {"icono":"fas fa-hourglass-half",     "nombre":"* Gestión del Tiempo",      "porcentaje":"50%"},
+    {"icono":"fas fa-flag-usa",           "nombre":"* Idioma Inglés",           "porcentaje":"50%"},
+    {"icono":"fas fa-hand-holding-heart", "nombre":"* Inteligencia Emocional",  "porcentaje":"50%"},
+    {"icono":"fas fa-users",              "nombre":"* Liderzgo",                "porcentaje":"50%"},
+    {"icono":"fas fa-square-root-alt",    "nombre":"* Matemáticas",             "porcentaje":"50%"},
+    {"icono":"fas fa-people-carry",       "nombre":"* Trabajo en Equipo",       "porcentaje":"50%"}],
+
 "proyecto":[
     {
-    "imagen":"./assets/img/imagenproyecto.jpeg",
+    "imagen":"./assets/img/Proyecto1.jpg",
     "nombre":"Primer Proyecto: Este Portfolio",
     "descripcion":"Este portfolio es mi regreso como programadora luego de 21 años de deuda pendiente para conmigo. Espero que les guste mi trabajo y que sea el primero de muchos más.",
     "refboton":"'#!'",

@@ -1,3 +1,5 @@
+<!-- ENCABEZADO -->     <!-- Contenido específico CSS en componente -->
+
 <header class= "banner mb-2">
 <img src="./assets/img/LogoArgProgNeg.png" alt="Logo de Argentina Programa" class="LogoRect">
 <button *ngIf="!UsuaLog" class="boton-verde flota-derecha" routerLink="/login"  >Editar Portfolio</button>
@@ -5,14 +7,44 @@
     <div class="iconos-red-soc">
         <a class="icono-red-soc" href="#!"><i class="fab fa-linkedin-in"></i></a>
         <a class="icono-red-soc" href="https://www.instagram.com/p/CcP6kNku3BV/?igshid=YmMyMTA2M2Y="><i class="fab fa-instagram"></i></a>
-        <a class="icono-red-soc" href="src/assets/img/CaisteEnLaTrampa.jpg"><i class="fab fa-github"></i></a>
-    <!--    <a class="icono-red-soc" href="https://github.com/RominaRomano"><i class="fab fa-github"></i></a>-->
+        <a class="icono-red-soc" href="https://github.com/RominaRomano"><i class="fab fa-github"></i></a>
         <a class="icono-red-soc" href="https://www.facebook.com/profile.php?id=100007328088684"><i class="fab fa-facebook-f"></i></a>
     </div>
-    <img class="img-banner" [src]="miPortfolio.dirBanner" alt="Banner del Portfolio">
-    <button *ngIf="UsuaLog" class="botoncito-verde botoncito-banner"><i class="fas fa-edit"></i></button>
+    <img class="img-banner" [src]="miPersona.dirBanner" alt="Banner del Portfolio">
+    <button *ngIf="UsuaLog" class="botoncito-verde botoncito-banner" (click)="Editar('B')"><i class="fas fa-edit"></i></button>
     <div class="perfil">
-        <img class="img-perfil redondear mb-2" [src]="miPortfolio.dirPerfil" alt="Imagen Foto de Perfil">
-        <button *ngIf="UsuaLog" class="botoncito-verde botoncito-perfil"><i class="fas fa-edit"></i></button>
+        <img class="img-perfil redondear mb-2" [src]="miPersona.dirPerfil" alt="Imagen Foto de Perfil">
+        <button *ngIf="UsuaLog" class="botoncito-verde botoncito-perfil" (click)="Editar('P')"><i class="fas fa-edit"></i></button>
     </div>
 </header>
+
+<!-- MODAL PARA CRUD -->
+<div *ngIf="modalSwitch"> 
+    <section class="modal">
+        <div class="modal-arreglo">
+            <div class="formulario">
+                <button class="cerrar" (click)="cierraModal()">X</button>  
+                <h1 class="mb-3">Edición de {{mensaje}}</h1>
+                <form (ngSubmit)="onEnviar()">
+                    <label *ngIf="foto=='B'" for="dirBanner" > 
+                        <span>Imagen del Banner: </span>
+                        <select  name="dirBanner" placeholder="Banner del Portfolio" [(ngModel)]="nuevoBanner" required>
+                            <option value="./assets/img/Banner0.jpg">Banner Predeterminado</option>
+                            <option value="./assets/img/Banner1.jpg">BannerOriginal</option>
+                            <option value="./assets/img/Banner2.jpg">Banner WW - MM</option>
+                        </select>
+                    </label>
+                    <label *ngIf="foto=='P'" for="dirPerfil" > 
+                        <span>Imagen de Perfil: </span>
+                        <select name="dirPerfil" placeholder="Perfil del Portfolio" [(ngModel)]="nuevoPerfil">
+                            <option value="./assets/img/FotoPerfil0.JPG">Perfil Predeterminado</option>
+                            <option value="./assets/img/FotoPerfil1.JPG">Perfil Original</option>
+                            <option value="./assets/img/FotoPerfil2.JPG">Perfil WW - MM</option>
+                        </select>
+                    </label>
+                    <button type="submit" class="boton-confirma">Actualizar {{mensaje}}</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>

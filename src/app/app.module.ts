@@ -12,14 +12,8 @@ import { PortfolioService } from './servicios/portfolio.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalLoginComponent } from './componentes/modal-login/modal-login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AutenticacionService } from './servicios/autenticacion.service';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { ModalEducacionComponent } from './componentes/modal-educacion/modal-educacion.component';
-import { ModalExperienciaComponent } from './componentes/modal-experiencia/modal-experiencia.component';
-import { ModalHabilidadesComponent } from './componentes/modal-habilidades/modal-habilidades.component';
-import { ModalProyectosComponent } from './componentes/modal-proyectos/modal-proyectos.component';
 import { PortfolioComponent } from './componentes/portfolio/portfolio.component';
-
+import { CertificadoComponent } from './componentes/certificado/certificado.component';
 
 @NgModule({
   declarations: [
@@ -31,11 +25,8 @@ import { PortfolioComponent } from './componentes/portfolio/portfolio.component'
     HabilidadesComponent,
     ProyectosComponent,
     ModalLoginComponent,
-    ModalEducacionComponent,
-    ModalExperienciaComponent,
-    ModalHabilidadesComponent,
-    ModalProyectosComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    CertificadoComponent
   ],
   imports: [
     BrowserModule,

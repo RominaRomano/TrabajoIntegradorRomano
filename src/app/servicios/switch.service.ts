@@ -7,5 +7,5 @@ export class SwitchService {
 
   constructor() { }
 
-  $modal = new EventEmitter<any>();
+  $modal = new EventEmitter<any>(); // Actualiza el valor de bandera Abre-Cierra Modals
 }

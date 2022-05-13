@@ -1,8 +1,9 @@
 export interface Proyecto {
+    id: number;
     imagen: string,
     nombre: string,
     descripcion: string,
-    erfboton: string,
+    refboton: string,
     fechini: string,
     fechfin: string
 }

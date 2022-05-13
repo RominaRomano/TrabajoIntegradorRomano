@@ -1,23 +1,53 @@
 <!--DOMINIO DE HABILIDADES DURAS Y BLANDAS - IDIOMAS-->
+<!-- Contenido específico CSS en componente -->
 
 <section class="pd-section alterna-color mb-5">
     <div class="botoncito-flex mb-5 ">
         <h1 class="titulo">Habilidades</h1>
-        <button *ngIf="UsuaLog" class="ml-5 botoncito-verde" (click)="abreModal('Alta',null)"><i class="fas fa-plus"></i></button>
+        <button *ngIf="UsuaLog" class="ml-5 botoncito-verde" (click)="Alta()"><i class="fas fa-plus"></i></button>
     </div>
     <h3 class="subtitulo mb-5">de las Duras y de las Blandas</h3>
     <div class="container_grafico">
-        <div class="grafico" *ngFor="let habilidad of habilidadlist" [ngStyle]="{'background-image':colorConic(habilidad.porcentaje)}"> 
+        <div class="grafico" *ngFor="let habilidad of habilidadlist; let i = index" [ngStyle]="{'background-image':colorConic(habilidad.porcentaje)}"> 
             <p class="textgraf"><i class={{habilidad.icono}}></i></p>
             <p class="porcgraf">{{habilidad.porcentaje}}</p>
             <div class="botoncito-skill">
-                <button *ngIf="UsuaLog" class="botoncito-verde" (click)="abreModal('Modificación',habilidad)"><i class="fas fa-edit"></i></button>    
-                <button *ngIf="UsuaLog" class="botoncito-verde" (click)="abreModal('Baja',habilidad)"><i class="fas fa-trash-alt"></i></button>
+                <button *ngIf="UsuaLog" class="botoncito-verde" (click)="Modificacion(i)"><i class="fas fa-edit"></i></button>    
+                <button *ngIf="UsuaLog" class="botoncito-verde" (click)="Baja(i)"><i class="fas fa-trash-alt"></i></button>
             </div>
         </div>    
     </div>
 </section>
 
-<div *ngIf="modalSwitch==true">
-    <app-modal-habilidades proceso={{procesoABM}} [habilidad]="habilidadModBaj"></app-modal-habilidades>
+<!-- MODAL PARA CRUD -->
+<div *ngIf="modalSwitch">
+    <section class="modal">
+        <div class="modal-arreglo">
+            <div class="formulario">
+                <button class="cerrar" (click)="cierraModal()">X</button>    
+                <h1 class="mb-3">Edición de Sección Habilidades</h1>
+                <form  (ngSubmit)="onEnviar()">
+                    <div *ngIf="alta">  <!-- permitirá seleccionar una habilidad -->
+                        <label for="Icono" > 
+                            <span>Habilidades a agregar: </span>
+                            <select name="icono" placeholder="Habilidad nueva" [(ngModel)]="nuevoNombre">
+                                <option [value]="habil.nombre" *ngFor="let habil of muestraHabilidad">{{habil.nombre}}</option>
+                            </select>
+                        </label>  
+                    </div>
+                    <div *ngIf="!alta">     <!-- Sólo mostrará la Habilidad -->
+                        <label for="Icono" > 
+                            <span>Habilidad Seleccionada: </span>
+                            <input type="text" name="Icono" id="Icono" autocomplete="Icono" [(ngModel)]="nuevoNombre" readonly> <!-- solo debe mostrar la seleccionada -->
+                        </label>
+                    </div>
+                    <label for="Porcentaje">    <!-- permite editar si no es una baja -->
+                        <span>Porcentaje: </span>
+                        <input type="text" name="Porcentaje" id="Porcentaje" placeholder="Porcentaje.. ej:35%" [(ngModel)]="nuevoPorcentaje" [readonly]=baja>
+                    </label>
+                    <button type="submit" class="boton-confirma">Confirmar {{mensajeBoton}} de la Habilidad</button>
+                </form>
+            </div>
+        </div>
+    </section>
 </div>
