@@ -7,7 +7,7 @@ const routes: Routes = [
 {path: 'home', component: PortfolioComponent },   // Dirige mediante la Url al Portfolio
 {path: 'login', component: ModalLoginComponent},  // Dirige mediante la Url al Login
 {path: '', redirectTo: '/home', pathMatch:'full'},  // Dirige mediante la Url vacía al Portfolio
-{ path: '**', redirectTo: '/home'}    // Dirige mediante la cualquier Url no conocida al Portfolio
+{ path: '**', redirectTo: '/home'}    // Dirige mediante cualquier Url no conocida al Portfolio
 ];
 
 @NgModule({
