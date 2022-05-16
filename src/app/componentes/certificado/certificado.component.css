@@ -4,6 +4,7 @@ h1 {
   
   .carrusel {
     display: flex;
+    width: 100%;
     gap: 1rem;
     justify-content: center;
   }
@@ -12,7 +13,7 @@ h1 {
     list-style: none;
     margin: 0;
     padding: 0;
-    max-width: 60rem;
+    max-width: 50rem;
     scroll-behavior: smooth;
   }
   
@@ -24,9 +25,10 @@ h1 {
   }
   
   .carrusel-fotos img {
+    display: flex;
     background: #5c4639;
     border: .4rem solid #5c4639;
-    width: 60rem;
-    height: 30rem;
+    width: 50rem;
+    height: 25rem;
     object-fit: contain;  
   }

@@ -87,18 +87,17 @@ body { /*aplico a todo lo que esté en el body del html*/
 .d-flex {
   display: flex;
 }
-.flex-grow-1 {
-  flex-grow: 1;
-}
-.flex-shrink-0 {
-  flex-shrink: 0;
-}
+
 .ml-5 {
   margin-left: 5rem;
 }
 
 .ml-1 {
   margin-left: 1rem;
+}
+
+.ml-2 {
+  margin-left: 2rem;
 }
 
 .mb-0 {

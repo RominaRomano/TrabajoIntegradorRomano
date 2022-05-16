@@ -5,18 +5,18 @@
         <h1 class="titulo">Mis Proyectos</h1>
         <button *ngIf="UsuaLog" class="ml-5 botoncito-verde" (click)="Alta()"><i class="fas fa-plus"></i></button>
     </div>
-    <div class="d-flex mb-5" *ngFor="let proyecto of proyectolist; let i = index">
-        <img [src]="proyecto.imagen" alt="Imagen del Proyecto" class="LogoCuad">
-        <div class="flex-grow-1">
-            <h3 class="subtitulo mb-3">{{proyecto.nombre}}</h3>
-            <p class="mb-3">{{proyecto.descripcion}}</p>
-            <button class="boton-verde" onclick="location.href='#!'">Ir al Proyecto</button>    
-        </div>
-        <div class="flex-shrink-0">
+    <div class="mb-5" *ngFor="let proyecto of proyectolist; let i = index">
+        <div class="flota-derecha ml-2">
             <button *ngIf="UsuaLog" class="botoncito-verde botoncito-flex" (click)="Modificacion(i)"><i class="fas fa-edit"></i></button>
             <button *ngIf="UsuaLog" class="botoncito-verde botoncito-flex" (click)="Baja(i)"><i class="fas fa-trash-alt"></i></button>
             <span class="texto-color">{{proyecto.fechini}} - {{proyecto.fechfin}}</span>
         </div>
+        <div class="d-flex">
+            <img [src]="proyecto.imagen" alt="Imagen del Proyecto" class="LogoCuad">
+            <h3 class="subtitulo mb-3">{{proyecto.nombre}}</h3>
+        </div>    
+        <p class="mb-3">{{proyecto.descripcion}}</p>
+        <button class="boton-verde" onclick="location.href='#!'">Ir al Proyecto</button>    
     </div>
 </section>
 

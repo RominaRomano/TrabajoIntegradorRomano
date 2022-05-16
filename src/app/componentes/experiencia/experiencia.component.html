@@ -5,17 +5,17 @@
         <h1 class="titulo">Experiencias Laborales</h1>
         <button *ngIf="UsuaLog" class="ml-5 botoncito-verde" (click)="Alta()"><i class="fas fa-plus"></i></button>
     </div>
-    <div class="d-flex mb-5" *ngFor="let experiencia of experiencialist; let i = index"> 
-        <div class="flex-grow-1">
+    <div class="mb-5" *ngFor="let experiencia of experiencialist; let i = index"> 
+        <div class="flota-derecha ml-2">
+            <button *ngIf="UsuaLog" class="botoncito-verde botoncito-flex" (click)="Modificacion(i)"><i class="fas fa-edit"></i></button>
+            <button *ngIf="UsuaLog" class="botoncito-verde botoncito-flex" (click)="Baja(i)"><i class="fas fa-trash-alt"></i></button>
+            <span class="texto-color">{{experiencia.fechini}} - {{experiencia.fechfin}}</span>
+        </div>
+        <div>
             <h3 class="subtitulo mb-0">{{experiencia.puesto}}</h3>
             <p class="minisubtitulo mb-3">{{experiencia.empresa}}</p>
             <p>{{experiencia.tarea}}</p>
             <p *ngIf="experiencia.contacto !==''">Contacto: {{experiencia.contacto}}</p>
-        </div>
-        <div class="flex-shrink-0">
-            <button *ngIf="UsuaLog" class="botoncito-verde botoncito-flex" (click)="Modificacion(i)"><i class="fas fa-edit"></i></button>
-            <button *ngIf="UsuaLog" class="botoncito-verde botoncito-flex" (click)="Baja(i)"><i class="fas fa-trash-alt"></i></button>
-            <span class="texto-color">{{experiencia.fechini}} - {{experiencia.fechfin}}</span>
         </div>
     </div>
 </section>
