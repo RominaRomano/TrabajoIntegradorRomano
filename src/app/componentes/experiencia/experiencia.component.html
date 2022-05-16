@@ -7,8 +7,10 @@
     </div>
     <div class="mb-5" *ngFor="let experiencia of experiencialist; let i = index"> 
         <div class="flota-derecha ml-2">
-            <button *ngIf="UsuaLog" class="botoncito-verde botoncito-flex" (click)="Modificacion(i)"><i class="fas fa-edit"></i></button>
-            <button *ngIf="UsuaLog" class="botoncito-verde botoncito-flex" (click)="Baja(i)"><i class="fas fa-trash-alt"></i></button>
+            <div *ngIf="UsuaLog">
+                <button  class="botoncito-verde botoncito-flex" (click)="Modificacion(i)"><i class="fas fa-edit"></i></button>
+                <button  class="botoncito-verde botoncito-flex" (click)="Baja(i)"><i class="fas fa-trash-alt"></i></button>
+            </div>
             <span class="texto-color">{{experiencia.fechini}} - {{experiencia.fechfin}}</span>
         </div>
         <div>
