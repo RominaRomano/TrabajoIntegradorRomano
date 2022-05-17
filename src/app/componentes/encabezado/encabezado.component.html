@@ -5,10 +5,10 @@
 <button *ngIf="!UsuaLog" class="boton-verde flota-derecha" routerLink="/login"  >Editar Portfolio</button>
 <button *ngIf="UsuaLog" class="boton-verde flota-derecha" routerLink="/logout" (click)="logout()" >Salir de Edición</button>
     <div class="iconos-red-soc">
-        <a class="icono-red-soc" href="https://www.linkedin.com/in/romina-d-romano/"><i class="fab fa-linkedin-in"></i></a>
-        <a class="icono-red-soc" href="https://www.instagram.com/p/CcP6kNku3BV/?igshid=YmMyMTA2M2Y="><i class="fab fa-instagram"></i></a>
-        <a class="icono-red-soc" href="https://github.com/RominaRomano"><i class="fab fa-github"></i></a>
-        <a class="icono-red-soc" href="https://www.facebook.com/profile.php?id=100007328088684"><i class="fab fa-facebook-f"></i></a>
+        <a class="icono-red-soc"  target="_blank" href="https://www.linkedin.com/in/romina-d-romano/"><i class="fab fa-linkedin-in"></i></a>
+        <a class="icono-red-soc"  target="_blank" href="https://www.instagram.com/p/CcP6kNku3BV/?igshid=YmMyMTA2M2Y="><i class="fab fa-instagram"></i></a>
+        <a class="icono-red-soc"  target="_blank" href="https://github.com/RominaRomano"><i class="fab fa-github"></i></a>
+        <a class="icono-red-soc"  target="_blank" href="https://www.facebook.com/profile.php?id=100007328088684"><i class="fab fa-facebook-f"></i></a>
     </div>
     <img class="img-banner" [src]="miPersona.dirBanner" alt="Banner del Portfolio">
     <button *ngIf="UsuaLog" class="botoncito-verde botoncito-banner" (click)="Editar('B')"><i class="fas fa-edit"></i></button>
