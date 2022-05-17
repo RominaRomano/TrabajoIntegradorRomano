@@ -26,10 +26,7 @@
                         <div *ngIf="Password?.hasError('minLength')" class="aviso"><span>La contrasena debe tener 8 o mas caracteres</span></div>
                     </div>
                     <div [hidden]="!form.invalid"class="aviso">
-                        <p>Para visualizar el botón de</p>
-                        <p>Ingreso a la Edición debe</p>
-                        <p>ingresar su E-mail y su contraseña </p>
-                        <p>(no menor a 8 caracteres).  </p>
+                        <p clas="txt-just">Para visualizar el botón de <br> Ingreso a la Edición debe <br> ingresar su E-mail y su contraseña <br>(no menor a 8 caracteres).  </p>
                     </div>
                   </div>
                   <button type="submit" [hidden]="form.invalid" class="boton-confirma" >iniciar sesion como administrador/a</button> <!--(click)="ventanaConfirma(Email?.hasError('required'),Password?.hasError('required'))"-->

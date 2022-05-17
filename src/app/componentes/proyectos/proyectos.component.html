@@ -6,7 +6,7 @@
         <button *ngIf="UsuaLog" class="ml-5 botoncito-verde" (click)="Alta()"><i class="fas fa-plus"></i></button>
     </div>
     <div class="mb-5" *ngFor="let proyecto of proyectolist; let i = index">
-        <div class="flota-derecha ml-2">
+        <div class="txt-derecha ml-2">
             <div *ngIf="UsuaLog">
                 <button class="botoncito-verde botoncito-flex" (click)="Modificacion(i)"><i class="fas fa-edit"></i></button>
                 <button class="botoncito-verde botoncito-flex" (click)="Baja(i)"><i class="fas fa-trash-alt"></i></button>
@@ -17,7 +17,7 @@
             <img [src]="proyecto.imagen" alt="Imagen del Proyecto" class="LogoCuad">
             <h3 class="subtitulo mb-3">{{proyecto.nombre}}</h3>
         </div>    
-        <p class="mb-3">{{proyecto.descripcion}}</p>
+        <p class="txt-justif mb-3">{{proyecto.descripcion}}</p>
         <button class="boton-verde" onclick="location.href='#!'">Ir al Proyecto</button>    
     </div>
 </section>

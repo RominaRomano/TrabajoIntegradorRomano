@@ -88,6 +88,14 @@ body { /*aplico a todo lo que esté en el body del html*/
   display: flex;
 }
 
+.txt-justif{
+  text-align: justify;
+}
+
+.txt-derecha{
+  text-align: right;
+}
+
 .ml-5 {
   margin-left: 5rem;
 }
@@ -158,7 +166,7 @@ body { /*aplico a todo lo que esté en el body del html*/
   }
   
   .modal-arreglo {
-    width: 50%;
+    width: 90%;
     max-width: 80rem;
     max-height: 90%;
     padding: 2% 0 0;

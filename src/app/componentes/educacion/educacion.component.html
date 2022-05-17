@@ -6,7 +6,7 @@
         <button *ngIf="UsuaLog" class="ml-5 botoncito-verde" (click)="Alta()"><i class="fas fa-plus"></i></button>
     </div>
     <div class="mb-5" *ngFor="let escuela of educacionlist; let i = index">
-        <div class="flota-derecha ml-2">
+        <div class="txt-derecha ml-2">
             <div *ngIf="UsuaLog">
                 <button class="botoncito-verde botoncito-flex" (click)="Modificacion(i)"><i class="fas fa-edit"></i></button>
                 <button class="botoncito-verde botoncito-flex" (click)="Baja(i)"><i class="fas fa-trash-alt"></i></button>
@@ -18,7 +18,7 @@
             <h3 class="subtitulo mb-0">{{escuela.nombre}}</h3>
         </div>    
         <p class="minisubtitulo mb-0">{{escuela.titulo}}</p>
-        <p>{{escuela.descripcion}}</p>
+        <p class="txt-justif">{{escuela.descripcion}}</p>
     </div>
 </section>
 
