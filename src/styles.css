@@ -88,10 +88,6 @@ body { /*aplico a todo lo que esté en el body del html*/
   display: flex;
 }
 
-.txt-justif{
-  text-align: justify;
-}
-
 .txt-derecha{
   text-align: right;
 }
