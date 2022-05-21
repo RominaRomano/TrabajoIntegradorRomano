@@ -3,7 +3,8 @@ export interface Proyecto {
     imagen: string,
     nombre: string,
     descripcion: string,
-    refboton: string,
+    rutafrontend: string,
+    rutabackend: string,
     fechini: string,
     fechfin: string
 }

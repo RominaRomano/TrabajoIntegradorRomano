@@ -30,7 +30,8 @@ export class ProyectosComponent implements OnInit {
       id:[0,[Validators.nullValidator]],
       imagen:['',[Validators.nullValidator]],
       nombre:['',[Validators.required]],
-      refboton:['',[Validators.required]],
+      rutafrontend:['',[Validators.required]],
+      rutabackend:['',[Validators.required]],
       descripcion:['',[Validators.nullValidator]],        
       fechini:['',[Validators.required]],
       fechfin:['',[Validators.required]]
@@ -76,6 +77,7 @@ export class ProyectosComponent implements OnInit {
     let proyecto: Proyecto = this.form.value; // Tomo valores del formulario
     console.log(proyecto);
     if (this.mensajeBoton=="Alta") { // SI ES UN ALTA
+      console.log("Estamos en el alta");
       this.datosPortfolio.crearProyecto(proyecto).subscribe(  //AGREGA EN BD Y TRAE NUEVA EDUCACION
         (newProyecto: Proyecto) => {
           this.proyectolist.push(newProyecto); // AGREGA AL ARRAY de Proyectos
@@ -91,7 +93,7 @@ export class ProyectosComponent implements OnInit {
     } 
     else {    
         if (this.mensajeBoton=="Modificación") {   // SI ES MODIFICACION
-          //console.log("Estamos en la modificación");
+          console.log("Estamos en la modificación");
           Swal.fire({   // Consulta al Usuario
             title: 'Desea realizar los cambios en el proyecto '+proyecto.nombre+ ' ?',
             showDenyButton: true,
@@ -124,7 +126,7 @@ export class ProyectosComponent implements OnInit {
           })
         }
         else {  // SI ES UNA BAJA
-          //console.log("Estamos en la baja");
+          console.log("Estamos en la baja");
           Swal.fire({   // Consulta al Usuario
             title: 'Está seguro?',
             text: "Usted está por eliminar el Proyecto " + proyecto.nombre,
@@ -165,7 +167,8 @@ export class ProyectosComponent implements OnInit {
       id:0,
       imagen:'',
       nombre:'',
-      refboton:'',
+      rutafrontend:'',
+      rutabackend:'',
       descripcion:'',        
       fechini:'',
       fechfin:''
@@ -177,7 +180,8 @@ export class ProyectosComponent implements OnInit {
       id:proyecto.id,
       imagen:proyecto.imagen,
       nombre:proyecto.nombre,
-      refboton:proyecto.refboton,
+      rutafrontend:proyecto.rutafrontend,
+      rutabackend:proyecto.rutabackend,
       descripcion:proyecto.descripcion,        
       fechini:proyecto.fechini,
       fechfin:proyecto.fechfin

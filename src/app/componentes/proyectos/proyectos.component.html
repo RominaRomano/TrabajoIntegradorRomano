@@ -18,7 +18,8 @@
             <h3 class="subtitulo mb-3">{{proyecto.nombre}}</h3>
         </div>    
         <p class="mb-3">{{proyecto.descripcion}}</p>
-        <button class="boton-verde" onclick="location.href='#!'">Ir al Proyecto</button>    
+        <a *ngIf="proyecto.rutafrontend!=''" target="_blank" href={{proyecto.rutafrontend}}> <input type="button" class="boton-verde" value="Ir al Front-End"></a>
+        <a *ngIf="proyecto.rutafrontend!=''" target="_blank" href={{proyecto.rutabackend}}> <input type="button" class="boton-verde" value="Ir al Back-End"></a>
     </div>
 </section>
 
@@ -30,43 +31,46 @@
               <button class="cerrar" (click)="cierraModal()">X</button>    
               <h1 class="mb-3">Edición de Sección Proyectos</h1>
               <form [formGroup]="form" (ngSubmit)="onEnviar()">
-                  <div>
-                      <div class="d-flex">
-                          <label class="form-label" for="Nombre" > 
-                              <span>Nombre del Proyecto: </span>
-                              <input class="form-control" type="text" formControlName="nombre" placeholder="Ingrese el nombre del Proyecto" [readonly]=baja>
-                          </label>
-                          <label class="form-label ml-1" for="RefBoton" > 
-                              <span>Título obtenido: </span>
-                              <input class="form-control" type="text" name="RefBoton" formControlName="refboton" id="RefBoton" placeholder="La ruta para mostrar el proyecto" autocomplete="RefBoton" [readonly]=baja>
-                          </label>
-                      </div>
-                      <label class="form-label" for="Descripcion" > 
+                    <div>
+                        <label class="form-label" for="Nombre" > 
+                            <span>Nombre del Proyecto: </span>
+                            <input class="form-control" type="text" formControlName="nombre" placeholder="Ingrese el nombre del Proyecto" [readonly]=baja>
+                        </label>
+                        <label class="form-label" for="Descripcion" > 
                           <span>Breve descripción para agregar: </span>
                           <input class="form-control" type="text" name="Descripcion" formControlName="descripcion" id="Descripcion" placeholder="Escribe una breve descripción..." autocomplete="Descripcion" [readonly]=baja>
-                      </label>
-   
-                      <label class="form-label" for="Imagen" > 
-                          <span>Logo del Proyecto: </span>
-                          <select class="form-control" type="select" name="Imagen" formControlName="imagen" id="Imagen" placeholder="Logo del Proyecto">
-                              <option value="./assets/img/Proyecto0.jpg">Logo Predeterminado</option>
-                              <option value="./assets/img/Proyecto1.jpg">Logo Original</option>
-                          </select>
-                      </label>
-                      <div class="d-flex">
-                          <label class="form-label" for="FechIni" >
-                              <span>Fecha en que iniciaste tu carrera: </span>
-                              <input class="form-control" type="text" name="Fechini" formControlName="fechini" id="Fechini" placeholder="Mes y año en que iniciaste tus estudios" autocomplete="Fechini" [readonly]=baja>
-                          </label>
-                          <label class="form-label ml-1" for="FechFin" > 
-                              <span>Fecha en que finalizaste tu carrera: </span>
-                              <input class="form-control" type="text" name="Fechfin" formControlName="fechfin" id="Fechfin" placeholder="Mes y año en que concluiste tus estudios" autocomplete="Fechfin" [readonly]=baja>
-                          </label>
-                      </div>
-                  </div>
-                  <button type="submit" class="boton-confirma">Confirmar {{mensajeBoton}} del Proyecto</button>
-              </form>
-          </div>
-      </div>
+                        </label>
+                        <label class="form-label" for="Imagen" > 
+                            <span>Logo del Proyecto: </span>
+                            <select class="form-control" type="select" name="Imagen" formControlName="imagen" id="Imagen" placeholder="Logo del Proyecto">
+                                <option value="./assets/img/Proyecto0.jpg">Logo Predeterminado</option>
+                                <option value="./assets/img/Proyecto1.jpg">Logo Original</option>
+                            </select>
+                        </label>
+                        <div class="d-flex">
+                            <label class="form-label" for="FechIni" >
+                                <span>Fecha en que iniciaste tu proyecto: </span>
+                                <input class="form-control" type="text" name="Fechini" formControlName="fechini" id="Fechini" placeholder="Mes y año en que iniciaste tu proyecto" autocomplete="Fechini" [readonly]=baja>
+                            </label>
+                            <label class="form-label ml-1" for="FechFin" > 
+                                <span>Fecha en que finalizaste tu proyecto: </span>
+                                <input class="form-control" type="text" name="Fechfin" formControlName="fechfin" id="Fechfin" placeholder="Mes y año en que concluiste tu proyecto" autocomplete="Fechfin" [readonly]=baja>
+                            </label>
+                        </div>
+                        <div class="d-flex">
+                            <label class="form-label" for="RutaFrontEnd" >
+                                <span>Url al Front-End de tu proyecto </span>
+                                <input class="form-control" type="text" name="RutaFrontEnd" formControlName="rutafrontend" id="RutaFrontEnd" placeholder="Url al Front-End de tu proyecto" autocomplete="RutaFrontEnd" [readonly]=baja>
+                            </label>
+                            <label class="form-label ml-1" for="RutaBackEnd" > 
+                                <span>Url al Back-End de tu proyecto </span>
+                                <input class="form-control" type="text" name="RutaBackEnd" formControlName="rutabackend" id="RutaBackEnd" placeholder="Url al Back-End de tu proyecto" autocomplete="RutaBackEnd" [readonly]=baja>
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="boton-confirma">Confirmar {{mensajeBoton}} del Proyecto</button>
+                </form>
+            </div>
+        </div>
     </section>
 </div>
